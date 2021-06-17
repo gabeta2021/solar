@@ -1,0 +1,143 @@
+{% extends 'plantilla_base.html' %}
+{% load static %}
+{% block content %}
+
+<form method = "POST" action="" onsubmit="return val_eligio()"> 
+  {% csrf_token %}
+
+  <!-- IMAGENES DE TODAS LAS PROMOS -->
+  <div  class = "personas"> 
+      <div class = "capa-titulo">    
+          <div id="fantasma"></div> 
+ 
+          {% if request.user.is_staff %}
+            <div id="cerrar">
+                  <u align="right"><a href="{% url 'log_out' %}">Cerrar sesion</a></u>
+            </div>
+          {% else %}
+              <a></a>
+          {% endif %}
+
+          <div id="horas">
+            <p>Revisa nuestro proyectos</p>
+          </div>
+
+      </div>
+  
+      <div class="contenedor">  
+          <article class="persona__columna">
+              <a title="promo de 20">
+                <img src="/static/img/fig1.jpg" />
+              </a>
+          </article>
+
+          <article class="persona__columna">
+              <a title="promo de 30">
+                <img src="/static/img/fig2.jpg" />
+              </a>
+          </article>
+
+          <article class="persona__columna">
+              <a title="promo de 30">
+                <img src="/static/img/fig3.jpg" />
+              </a>
+          </article>
+
+          <article class="persona__columna">
+              <a title="promo de 40">
+                <img src="/static/img/fig4.jpg" />
+              </a>
+          </article>
+
+          <article class="persona__columna">
+              <a title="promo de 50">
+                <img src="/static/img/fig5.jpg" />
+              </a>
+          </article>
+
+          <article class="persona__columna">
+              <a title="promo de 60">
+                <img src="/static/img/fig6.jpg" />
+              </a>
+          </article>
+
+          <!--
+          <article class="persona__columna">
+              <a title="promo de 60 PREMIUN">
+                <img src="/static/img/prom60pre.jpg" />
+              </a>
+          </article>
+         
+          <article class="persona__columna">
+              <a title="promo de 70">
+                <img src="/static/img/prom70.jpg" />
+              </a>
+          </article>
+
+          <article class="persona__columna">
+              <a title="promo GOLD">
+                <img src="/static/img/gold.jpg" />
+              </a>
+          </article>
+
+          <article class="persona__columna">
+              <a title="rellenos">
+                <img src="/static/img/rellenos.jpg" />
+              </a>
+          </article>
+        -->
+
+      </div> <!--FIN contendor de fotos -->
+
+    {% if nosetrabaja == 2 %}  
+      <div class="contenedor-seleccion">
+          <div class ="contenedor-subgrid">
+            <div class="combo-promos">
+                <p>Seleccione promos</p>
+                <select name="promos" class="items-combo-promos" id="id_promo">
+                  {% for c in prs %}
+                    <option value ="{{c.descrip}}">{{c.descrip}}</option>
+                  {% endfor %}      
+                </select>
+            </div>
+
+            <div class="primera-celda">
+              <img id="carrito-icon-menu" src="/static/img/icon-carrito.png"  width="28">         
+              <span id="cantidad">Seleccionadas:</span> 
+            </div>
+          
+            <div class="div-caja1-seleccionada">
+              <input type="text" name="caja1-seleccionada" id="caja1-seleccionada" readonly> 
+            </div>   
+            
+            <div class="boton-elimina1"> <!--btn-xs: Define un tamaño extra pequeño. -->
+              <button title="Elimina selección" type="submit" id="elimina1" onclick="return elimina(this.id);" name ="submit" class="btn btn-danger btn-xs">X</button> 
+                <!-- <input type="text" name="fname" id="codigo1" class="codigo1" readonly> -->
+            </div>
+
+            <div class = "div-caja2-seleccionada">
+              <input type="text" name="caja2-seleccionada" size="25" id="caja2-seleccionada" readonly> 
+            </div>
+            <div class="boton-elimina2">
+              <button title="Elimina selección" type="submit" id="elimina2" onclick="return elimina(this.id);" name="submit" class="btn btn-danger btn-xs">X</button> 
+            </div>
+
+            <div class = "div-caja3-seleccionada">
+              <input type="text" name="caja3-seleccionada" size="25" id="caja3-seleccionada" readonly> 
+            </div>
+            <div class="boton-elimina3">
+              <button title="Elimina selección" type="submit" id="elimina3" onclick="return elimina(this.id);" name="submit" class="btn btn-danger btn-xs">X</button> 
+            </div>
+
+            <div class="cont-boton-seguir"> 
+              <button  class="btn btn-success" type="submit" id="btn-seguir">
+                     Cambios adicionales y valorización
+              </button>
+            </div>
+          </div> <!--contenedor-subgrid -->
+      </div>  <!-- contenedor-seleccion -->
+    {%endif%}  
+  </div>  <!-- personas -->
+
+</form> 
+{% endblock %}          

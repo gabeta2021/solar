@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE <html>
+<html lang="es">
+<!-- https://standensolar.wixsite.com/website-5 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name ="description", content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+
+   <link src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtRJUcKnpQI-9jvaSDHAmXgfrsLxM6RyA&callback=initMap&libraries=&v=weeklydefer">
+    <link src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>
+    <!-- para pantalla login --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js">
+    <link src="https://code.jquery.com/jquery-3.3.1.js">
+    
+    <script src="{% static 'js/myjs2.js' %}"></script>
+
+    <!-- <link rel="stylesheet" href="{% static 'css/mycss.css' %}">  -->
+    <link rel="stylesheet" href="{% static 'css/mycss_flex.css' %}">  
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+    
+    <!--para prueba -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css"> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   <!-- NUEVO -->
+    <script src="https://kit.font-awesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+
+    <link src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    <title id = "title">Standensolar</title>
+ 
+    <!-- logo en la pestaña del navegador  -->
+    <link rel="shortcut icon" type="image/jpg" href="/static/img/logo_sc.jpg"> 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+
+<body class="body" >
+    <header class="header">{% csrf_token %}
+        <div class="container logo-nav-container">  
+            <a href="#" class="logo"><img  src="{{ logo_corp_chico }}"></a>
+            <span class="menu-icon"><i class="fa fa-bars"></i></span>           
+            <span class="menu-cruz"><i class="fa fa-times"></i></span>    
+            <div class = "titulo">
+                <div class="grid-item1"><p>Avanzada en Tecnologia Solar</p></div>
+            </div>
+            <div class = "navigation">    
+                <ul> 
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Galería</a></li>
+                    {%if request.user.is_staff %}
+                        <li><a href="#">Admin</a></li>    
+                    {%else%}
+                        <li><a></a></li>
+                    {%endif%}
+                </ul>
+            </div>
+        </div>        
+    </header>
+
+    <div> 
+    {% block content %}
+    {% endblock %}
+    </div>
+
+    <script>
+        baguetteBox.run('.tz-gallery');  
+    </script>    
+
+
+    <!-- <div class="cajaflex"> -->
+    <footer class="footer">
+        <div class="footer-texto1">
+            {% for ob1 in obs %}
+                {%if ob1.codigo == 1 %}
+                    <p name="{{ob1.corr}}">{{ ob1.observacion1 }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+                
+        <div class="footer-texto3">
+            <a title="Mapa de ubicación">
+               <img src="/static/img/mapa.jpg" id="img" class="chica" onclick="return clic_img();"/> 
+            </a>
+        </div>
+
+        <div class="footer-texto2">
+            {% for ob1 in obs %}
+                {%if ob1.codigo == 2 %}
+                    <p name="{{ob1.corr}}">{{ ob1.observacion1 }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+
+        <div class="footer-texto4">
+            <p>Pagina diseñada por Gabriel Araya Garcia - email: gabrielaraya2011@gmail.com - f: +56 9 77211570</p>
+            <p>Serán muy valoradas las sugerencias de mejoramiento a esta aplicación, con el propósito de una experiencia mas fluida e intuitiva para los usuarios. Escribir a la dirección de correo aqui señalada<p>
+        </div>
+    </footer>
+    <!-- </div> -->
+</body> 
+
+
+<script>
+    jQuery('document').ready(function($){
+    var menuBtn = $('.menu-icon'),      /* clase icono rayitas */
+        menuBtn2 = $('.menu-cruz'),     /* clase icono cruz */
+        menu = $('.navigation ul');     /* clase menu desplegable */ 
+
+    /* icono rayitas*/  
+    menuBtn.click(function($) {
+        {
+            menu.addClass('show');      /* muestra el menu desplegable */
+            menuBtn.hide();             /* esconde icono rayitas */
+            menuBtn2.show();            /* muestra icono cruz */
+        }
+    });
+
+    /* icono cruz */
+    menuBtn2.click(function($) {
+        {
+            menu.removeClass('show');   /* quita el menu desplegable */
+            menuBtn.show();             /* muestra icono rayitas */
+            menuBtn2.hide();            /* esconde icono cruz */
+        }
+    });
+});
+
+</script>
+
+</html>

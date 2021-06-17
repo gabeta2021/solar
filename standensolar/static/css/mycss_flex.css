@@ -1,0 +1,1691 @@
+/*créditos al canal  https://www.youtube.com/watch?v=ys2kaK8HgnA */
+/* hice algunas mejoras */
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(236, 120, 11);
+  font-size: 1.2rem;  /*tamaño de las letras*/
+  line-height: 1.6em; /* interlineado */
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.3em;
+}
+
+/* parrafos */
+p {
+  margin-bottom: 1.6em; /*margen inferior funciona como enter entre parrafos*/
+}
+
+/* pantalla principal*/
+.container {
+  width: 95%;
+  /* max-width: 850px; */
+  max-width: 1200px /* GAG */
+  margin: 0 auto; 
+}
+
+.header {
+  background: #24303c; /**/  
+  color: white; 
+  padding: 2rem 0;
+  position: fixed;  /* menu fijo en la parte superior */
+  left: 0;
+  top: 0;
+  right: 0;   /* ocuapamos todo el ancho */
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  /* lo alineamos al centro */
+  align-items: center; 
+  flex-wrap: wrap;
+}
+
+/* logo */
+.logo {
+  letter-spacing: 15px;
+  font-size: 1.3em;
+}
+
+/*
+.titulo {
+  font-size:2.5rem;
+  text-align: right;
+  width:40%;
+}
+*/
+
+/*icono rayitas*/
+.menu-icon {
+  display: none;
+}
+
+/* icono cruz */
+.menu-cruz {
+  display: none;
+}
+
+/* todos los "ul" que esten dentro de "navigation" */
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li {
+  /* uno al lado del otro */
+  display: inline-block;
+}
+
+/* los enlaces dentro del menu */
+.navigation ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s linear;
+  border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+  background: #cc4444;
+}
+
+/* pantalla principal */
+.main {
+  padding-top: 12rem;
+}
+
+/*PIE DE PAGINA*/
+.footer {
+  display: grid;
+  grid-template-columns: 35% 30% 1fr;
+  grid-template-rows: 80% 20%; 
+  background: #24303c;
+  padding: 3rem 1; /* distancia con el borde superior*/
+  text-align:left;
+  margin-top: 6rem;
+  color: white;
+}
+
+.footer-texto1, .footer-texto2 {
+   margin-left: 1rem; 
+   margin-right: 1rem;
+   color: white;
+   background: #476D6B;
+   padding:10px;
+   border-radius: 5px;
+ }
+ 
+.footer-texto3 {
+   margin-left: 1rem; 
+   margin-right: 1rem;
+   color: white;
+   background: #476D6B;
+   padding:10px;
+   border-radius: 5px;
+   text-align: center; 
+ }
+
+.footer-texto3_ a img:hover { 
+  width: 100%;
+}
+
+.footer-texto4 {
+    grid-column: 1 / 6;   /* parte en el eje 1 y termina en eje 6*/
+    color: white;
+    font-size: 1rem;
+    text-align: center; 
+    margin-top: 3rem;
+    margin-left: 1rem;  
+    margin-right: 1rem;
+    background: #24303c;
+ }
+
+.v1_, .v2_ {
+  border-left: thick solid white;
+}
+
+.menu-link{
+   color: black;
+}
+
+.fb{
+   color: blue;
+}
+
+/* 600 */
+@media only screen and (max-width: 600px) {
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation{
+        width: 100%;
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation ul.show{
+        display: block;
+    }
+     
+     .navigation ul li {
+       display: block;
+     }
+     
+     /* los enlaces dentro del menu */
+     .navigation ul li a {
+       display: block;
+       padding: 0.5rem 1rem;
+       transition: all 0.2s linear;
+       border-radius: 5px;
+     }
+     
+     .navigation ul li a:hover {
+       background: #cc4444;
+     }
+
+     /* GALERIA==INTERNACIONAL=====GALERIA=INTERNACIONAL====GALERIA=INTERNACIONAL====GALERIA=====GALERIA=====GALERIA=====*/
+     .personas {
+         text-align: center; /* centra las fotos horizontalmente*/
+         justify-item: center;
+         width:100%;    /*900*/
+         margin: auto;  /* alinea y centra respecto al HTML*/
+         margin-top: 0.5rem;  /* posiciona verticalmente el titulo respecto a la pantalla */      
+      }
+
+
+      /* verde claro */
+      .capa-titulo {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;    
+          grid-template-rows: 50% 50%;
+          background: #BAFEC1; /* verde claro */
+          /*height: 100%;        /* alto de la franja que lleva el titulo verde */
+          margin-top: 9.5rem;  /* posiciona verticalmente el titulo respecto a la pantalla */
+          color: blue;    /* letra del texto*/
+          font-size: 1.5rem; 
+          text-align: center;
+          width:100%;
+          padding: 2rem;
+          border-radius: 0px 0px 15px 15px; 
+      }
+
+      .capa-titulo #fantasma {
+          padding: 0rem;
+          width:100%;
+          /*background-color: red;*/
+      } 
+
+       .capa-titulo #disponibilidad {
+          text-align:center;
+          font-size: 1.8rem;
+          width:100%;
+          /*background-color: white;*/
+      }
+
+      .capa-titulo #cerrar {
+          font-size: 15px; 
+          text-align: right;
+          width:100%;
+          /*background-color: orange;*/
+      }
+
+      .capa-titulo #horas {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        padding: 15px; 
+        /*border-right: 25px;*/
+        width:100%;
+        /*background-color:#EABEF2; /*morado claro*/
+      }
+
+      /* marco que contiene la grid (imagenes) */
+      .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3px;
+        text-align: center;   /* alinea horizontalmente*/
+        margin: auto;         /* alinea y centra respecto al HTML*/
+        margin-bottom: 5px;
+        border: 1px;
+        padding-top: 3rem;    /* margen sup. de la grid con respecto a su contenedor*/ 
+        padding-bottom: 3rem;
+        background-color: #EAE9E4;
+        border-radius: 10px 10px 10px 10px;
+        with:95%;
+      }
+
+      /* PRINCIPAL - promos */
+      .personas .contenedor {
+          grid-template-columns: repeat(1,1fr); 
+          /*align-items: center; */      
+          /*background: #F20707; /*rojo para pruebas */    
+          width:100%;
+          padding: 2rem;
+          margin-top: 1rem;
+          /* margin:auto; */
+      }
+    
+      /* TRATAMIENTO DE IMAGEN DE PROMO SELECCIONADA PARA PEDIR */
+      /* maximo agrandamiento de la imagen */
+      .promo-pedida a img:hover { 
+          width: 75%;
+      }
+
+      /* PRINCIPAL - borde de cada promo*/
+      persona__columna {
+        margin-right: 0px;
+        padding: 0rem;
+      }
+      
+      /*clase padre*/
+      .clase-cambios {
+        margin-top: 17rem;  /* ubicacion de esta ventana desde el borde de la clase padre*/
+      }        
+      
+      /*sub-clase (hija)*/
+      .form-identi {
+        margin-top: 12rem;  /* ubicacion de esta ventana desde elborde de la clase padre*/
+        margin-bottom: 5rem;
+       /*height:40px;    /* alto de este objeto contenedor*/
+      }
+     
+     .cont-subgrid-celda1 {
+        display: grid; 
+        grid-gap: 1px;
+        align-items: top; /* para centrar verticalmente */
+        max-width: 100%;  /* determina el ancho del contenedor */
+      }
+
+     .cont-subgrid-celda2 {
+       grid-gap: 1px;
+       align-items: top; /* para centrar verticalmente */
+       max-width: 100%;  /* determina el ancho del contenedor */
+       padding-left: 0rem;          
+      }
+
+
+     .valorizacion {
+        /*margin: auto;  /* alinea y centra respecto al HTML*/ 
+        background-color: #E6E2E9; 
+        width: 100%;    /* ancho del contenedor */
+        margin-top: 16rem;   /* posiciona verticalmente el titulo respecto a la pantalla */
+      }
+
+      .celdagrande-cambios {
+        /*CONTENEDORA DE LA SUBGRID*/
+        text-align: left; /* centra texto horizontalmente respecto a los limites de la celda */   
+        padding:3px;      /* espacio entre el texto (o foto) y el borde de la celada*/
+        margin-top: 60rem; /* posiciona verticalmente la grid respecto al borde de este contenedor */  
+      }
+
+      #caja2-1, #caja2-2, #caja2-3, #caja2-4, #caja2-5, #caja2-6, #caja2-7 {
+        width: 100%; 
+      }
+
+
+      /*RELLENO DE CADA ROLL*/
+      #relle1, #relle2, #relle3, #relle4, #relle5, #relle6, #relle7,#relle_tot {
+         width: 15rem;
+
+      }
+     
+      /*rellenos disponibles*/
+      .celda2-3 {
+          width:auto;
+      }
+
+      /* COMBO RELLENOS disponibles para cambiar */
+      #relle1_tot, #relle2_tot, #relle3_tot, #relle4_tot, #relle5_tot, #relle6_tot, #relle7_tot {
+         width: auto;
+      }
+      
+      /* SUBTOTAL CAMBIO DE RELLENOS */
+      .sub1_rell, .sub2_rell, .sub3_rell, .sub4_rell, .sub5_rell, .sub6_rell, .sub7_rell {
+         width: 100%;
+      }
+
+      .recuerda {
+        padding:18px;
+      }
+
+      .col-grid1-cuentas {
+        background-color: white;  /* color de cada fila de la grid */ 
+        padding-top: 0rem;
+      }
+
+      .col-grid1-cuentas, .col-grid2-cuentas, .col-grid3-cuentas, .col-grid4-cuentas {
+        height: 80px;  /* alto de cada fila de la grid */
+        background-color: #899EF3; 
+        padding-top: 0.7rem;
+      }
+
+      .contenedor-seleccion {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1px;
+        text-align: center;   /* alinea horizontalmente*/
+        padding-top: 2rem;    /* margen sup. de la grid con respecto a su contenedor */ 
+        margin: auto;         /* alinea y centra respecto al HTML*/
+        margin-bottom: 5px;
+        background-color: #EDEDED;
+        border: 1px;
+      }
+
+      .cont-boton-seguir {
+        display: flex;             /* para centrar el boton */
+        align-items: center;       /* para centrar verticalmente el boton */
+        justify-content: center;   /* para centrar horizontalmente el boton */
+        /*background-color: #C3E3AA; /* verde claro */ 
+        grid-column: 1 /  3;   
+        height: 100px;             /*alto de la caja verdecita que contiene el boton*/
+        margin-top: 0.5rem;        /* separacion del contend. c/respecto a la fila ant. de cuadriculas */
+        width:100%;
+      }
+
+      .titulo {
+        text-align: center;
+        color: yellow; 
+        /*background-color: #C3E3AA;  /* verde claro */ 
+        width:100%;
+      }
+
+      .form-register {
+        width: 320px;
+        background: #24303c;
+        padding: 30px;
+        margin:auto;
+        border-radius: 6px;
+        font-family: 'calibri';
+        color:white;
+        box-shadow: 7px 13px 37px #000;
+      }
+
+      .contendor-inicial {
+        display: flex;
+        flex-direction:column;
+        border:1px #B8B8B8 solid;
+        width: 100%; 
+        padding:1rem;
+        border-radius: 10px;
+        align-items: center;
+        grid-gap: 7px; /* distancia entre celdas */
+      }
+
+      .forma-pago-delcliente {
+        display: flex;
+        flex-direction:column;
+        border:1px #B8B8B8 solid;
+        width: 100%; 
+        padding:1rem;
+        border-radius: 10px;
+        align-items: center;
+        grid-gap: 7px; /* distancia entre celdas */
+      }
+
+      .footer {
+        display: flex;
+        flex-direction:column;
+        background: #24303c;
+        padding: 3rem 1; /* distancia con el borde superior*/
+        text-align:left;
+        margin-top: 6rem;
+        color: white;
+        grid-gap: 2px; /* distancia entre celdas */
+      }
+
+      .radiotrabajo {
+        display: flex;
+        flex-direction:row;
+        /*justify-content: space-between; */
+        text-align:center;
+        padding: 4px;
+        background-color: #899EF3;
+        width: 100%;
+      }
+      
+      .Inicializa-dia {
+        /*background-color: yellow;  */
+        padding: 4px;
+        text-align:center;
+        background-color: #899EF3;  
+        width: 100%;
+      }
+      
+      .revihora {
+        padding: 4px;
+        text-align:center;
+        background-color: #899EF3;  
+        width: 100%;        
+      }
+
+      .administrador {
+        width: 100%;    /* ancho del contenedor */
+        background-color: orange;
+      }
+
+      .grande {
+          width: 350px;
+          height: 200px;
+          -webkit-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          -ms-transition: all .2s ease-in-out;
+      }
+
+      .contendor-maximos-cambios {
+        height:150px;
+        text-align: center;
+        margin-top: 0rem; 
+       }
+
+      .contendor-maximos-cambios p {
+        margin-bottom: 0px;
+      }  
+
+      .contendor-maximos-cambios cambio-max1 {
+        width: 120px;
+        padding: 0px;
+        border-radius: 5px 5px 5px 5px;
+        margin-top: 0rem;
+      }
+
+      .alto {
+        height: 20px; 
+      }
+
+
+}
+/* fin responsivo 600 px */
+
+
+/* ==PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS==== */
+
+
+/* Texto titulo <p> "Revisa todas nuestras promos" */
+.gallery-container_ p.page-description_ {
+    /* background-color: #51C65A;  /*verde claro*/
+    text-align: center;
+    margin: 0.5px auto; /* distancia entre las fotos y el titulo "Revisa todas nuestras.." */
+    margin-top: 5px;
+    color: #888;
+    font-size: 18px;
+}
+
+/* texto dentro de la foto "<Sushi de categorias>" */
+.texto1 {
+  position:absolute;
+  top: 10px;
+  left:10%;
+  font-family:Georgia
+  font-size:22px;
+  color:fff;
+}
+
+/* clase que envuelve a las columnas donde estan las imagenes */
+.tz-gallery {
+    padding: 8px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    margin-top: 0;   /*gag */
+    margin-bottom: 30px;  /*espacio de separacion entre foto*/
+    transition: 0.2s ease-in-out; /*velocidad de agrandamiento*/
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2); 
+}
+
+/*agrandamiento cuando el mouse pasa por encima */
+.tz-gallery .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.tz-gallery img {
+    border-radius: 6px; 
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+
+/* GALERIA INTERNACIONAL ===== GALERIA INTERNACIONAL =====GALERIA INTERNACIONAL =====*/
+
+/* Cada imagen de la galeria*/
+.img {
+  width: 100%;
+}
+
+.gallery__img {
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+
+/* 1025 formato inicial pantalla notebook ===================================================================*/
+@media(min-width: 1025px) {
+     /* contendor de titulo verde */ 
+    .personas .contenedor {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      padding-top: 2rem;  
+    }
+  
+    /* marco que contiene la grid (fotos) */
+    .contenedor {
+      display: grid; 
+      grid-template-columns: 1fr 1fr 1fr;
+      width:85%; 
+      margin: auto;   /* alinea y centra equitativamente respecto al HTML*/
+      justify-item: center;
+      background-color: #EAE9E4; 
+      /* background-color: yellow; */
+      padding-top: 3rem;    /* margen sup. de la grid con respecto a su  */ 
+      padding-bottom: 3rem;
+      border-radius: 10px 10px 10px 10px;
+    }
+     
+    .capa-titulo {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;    /* a partir de la columna 1 toma 3 columnas*/
+      background: #BAFEC1; /* verde claro */
+      height: 80px; /* alto de la franja que lleva el titulo verde */
+      border-radius: 5px; 
+      color: blue;   /* color del texto */
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem; 
+      text-align: center;
+      margin-top: 6rem;   /* posiciona verticalmente el titulo respecto a la pantalla */
+      padding: 18px;  /* centra el texto verticalmente */
+    }
+
+
+    .capa-titulo #disponibilidad {
+      text-align:center;
+      font-size: 1.8rem;
+      width:100%;
+      /*background-color: red; */
+    }
+
+    .capa-titulo #cerrar {
+      /*background: blue;*/
+      font-size: 17px; 
+    }
+
+    .capa-titulo #horas {
+      grid-column-start: 1; 
+      grid-column-end: 4;
+      /*text-align:center;*/
+      /*background-color: blue;*/
+    }
+
+    /* contenedor de GRID GRANDE */
+    .valorizacion {
+      display: grid; 
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr; 
+      background-color: #EAE9E4; /* gris claro */
+      grid-gap: 5px; /* espacio entre celdas*/
+      padding: 2rem; /* espacio de contorno respecto al contenedor de la grid*/ 
+      width: 60%;    /* ancho del contenedor */
+      margin: auto;  /* alinea y centra respecto al HTML*/
+      flex-wrap: wrap;
+      margin-top: 12rem;   /* posiciona verticalmente respecto a la pantalla */
+    }
+
+    .col-grid1-cuentas, .col-grid2-cuentas, .col-grid3-cuentas, .col-grid4-cuentas {
+      background-color: #899EF3; 
+      height: 60px;  
+      padding-top: 0.7rem;
+    }
+
+    .titulo {
+        font-size:2.5rem;
+        text-align: right;
+        /*background-color: #C3E3AA;  /* verde claro */ 
+    }
+
+  .form-register {
+      width: 350px;
+      background: #24303c;
+      padding: 30px;
+      margin:auto;
+      /*margin-top: 4rem;   */
+      border-radius: 6px;
+      font-family: 'calibri';
+      color:white;
+      box-shadow: 7px 13px 37px #000;
+  }
+
+
+  .contendor-inicial {
+    display: grid; 
+    grid-template-columns: 30% auto 15%;
+    grid-template-rows: 1fr; 
+    padding:6px; /* espacio de los elementos con el contenedor*/
+    border:1px #B8B8B8 solid;
+    border-radius: 10px;
+  }
+
+  .forma-pago-delcliente {
+    display: flex;
+    flex-direction:column;
+    align-items: center; 
+    padding:10px;          /* espacio de los elementos con el contenedor*/
+    border:1px #B8B8B8 solid;
+    border-radius: 10px;
+    margin:auto;  /* significa que ambos margenes son iguales por defecto*/
+    width: 55%;
+  }
+
+}
+/* fin responsive 1025px*/
+
+
+/* contenedor de la foto de promo seleccionada */
+.promo-pedida {
+    background-color: #F7B3E0;  /* violetita rosado */
+    min-height: 60vh;   /* el alto, es lo mismo que el height */  
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    margin-top: 0.5rem; /*gag*/
+    align-items: center;
+    width: 100%;  /*gag */
+}
+
+
+/* TRATAMIENTO DE IMAGEN DE PROMO SELECCIONADA PARA PEDIR */
+/* agrandamiento */
+.promo-pedida a img {
+    -webkit-transition:all .9s ease; /* Safari y Chrome */
+    -moz-transition:all .9s ease; /* Firefox */
+    -o-transition:all .9s ease; /* IE 9 */
+    -ms-transition:all .9s ease; /* Opera */
+    width:30%;
+    margin-top: 2rem; /*gag*/
+    border-radius: 20px;
+}
+
+
+
+/* TRATAMIENTO DE IMAGEN DE PROMO SELECCIONADA PARA PEDIR */
+ /* Agrandamiento de la imagen de la promo */
+ .promo-pedida a img:hover { 
+    /* transform: scale(1.1); */
+    /* box-shadow: 0 8px 17px rgba(0,0,0,0.5); */
+    box-shadow: 30px 30px 30px rgba(178,0,0,0.5); 
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+
+
+/* FORMULARIO DE REGISTRO  caja contenedora */
+.form-register_ {
+  width: 350px;
+  background: #24303c;
+  padding: 30px;
+  margin:auto;
+  /*margin-top: 4rem;   */
+  border-radius: 6px;
+  font-family: 'calibri';
+  color:white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+/* VENTANA CONFIRMACION DE IDENTIFICACION CLIENTE CON TODOS SUS DATOS */
+.form-identi {
+  width: 400px;
+  background: #24303c; 
+  padding: 40px;
+  margin:auto;
+  border-radius: 6px;
+  font-family: 'calibri';
+  color:white;
+  box-shadow: 7px 13px 37px #000;
+  margin-top: 12rem;  /* ubicacion de esta ventana desde elborde de la clase padre*/
+  margin-bottom: 10rem;
+ /*height:40px;    /* alto de este objeto contenedor*/
+}
+
+
+/* FORMULARIO DE REGISTRO */
+/* Titulo del formulario */
+.form-register h4 {
+  font-size:22px;
+  margin-bottom: 20px;
+  text-align: center;   /* alinea horizontalmente*/
+}
+
+/* FORMULARIO DE REGISTRO */
+/*cada items de cajas de texto*/
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border:2px solid #1f53c5;
+  font-family: 'calibri';
+  font-size:18px;
+}
+
+.personas  {
+  /*background: #EBF491;  /*amarillo*/
+  /*background: #D8F8F4;  /*celeste claro*/
+  width: 100%;
+  text-align: center;  /*alinea las fotos horizontalmente*/
+  padding-top: 4rem;   /* alto del fondo amarillo */ 
+  margin: auto;        /* alinea y centra respecto al HTML*/
+  /*height: auto; */
+  margin-bottom: 10px;
+ }
+
+/* clase padre */
+.clase-cambios  {
+    background-color: #F7B3E0;  /* violetita rosado */
+    min-height: 12vh;   /* alto de la caja contendedora , es lo mismo que el height */  
+    height: 340px;      /* lunes 25 */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    margin-top: 8rem; /*gag*/
+    margin: auto;        /* alinea y centra respecto al HTML*/  
+    align-items: center;
+    width: 80%;  /*gag */
+ }
+
+.boton-seguir {
+    border: none;
+    color: white;
+    background-color: #42AB17;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.combo-promos {
+    display:flex;
+    flex-direction:column;
+    grid-column: 1 / 3;   /* parte en la 1 y termina en la 3*/
+    text-align: left; 
+    /*background-color: orange; */
+    align-items: center;
+    height: 75px;
+}
+
+#id_promo {
+  width:100%;
+}
+
+.primera-celda {
+    grid-column: 1/3;   /* parte en la 1 y termina en la 3*/
+    /*text-align: center; */
+    /*background-color: yellow; */
+    height: 40px;
+    text-align: left;
+}
+
+.combo-promos p {
+    display: flex;
+    justify-content: center;  /* para centrar horizontalmente el objeto */   
+}
+
+
+.boton-elimina1, .boton-elimina2{
+  /*background-color: green; */
+  height: 30px;  
+}
+
+
+.linea-divisoria {
+  border-bottom:solid 1px grey;
+  width:100%;
+  height:50px;
+}
+
+.codigo1, .codigo2, .codigo3 {
+  width:1px;
+}
+
+/* CONTENEDOR DE  grid grande */
+.celdagrande-cambios {
+  /*CONTENEDORA DE LA SUBGRID*/
+  /* background-color: #FFFFFE; */
+  background-color: #EAE9E4;
+  text-align: left; /* centra texto horizontalmente respecto a los limites de la celda */   
+  padding:3px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+  margin-top: 0.5rem;   /* posiciona verticalmente la grid respecto al borde de este contenedor */  
+  border-radius: 8px;
+}
+
+
+
+.celda2, .celda3  {
+  background-color: #AEAFAC; 
+  text-align: center; /* centra texto respecto a los limites de la celda */
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada */
+  width: 100%
+  border-radius: 20px 20px; 
+}
+
+
+/* TITULO "SEGUNDA PROMO" */
+.celda3 {
+  text-align: center;    
+  background: linear-gradient(#EF95BD, #FFEDF5);  
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+  letter-spacing: 3px;
+  font-size: 1.5em;
+}
+
+.celda4 {
+  background-color: #EF95BD; 
+  text-align: center; /* centra texto respecto a los limites de la celda */ 
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+}
+
+.celda5 {
+  background-color: #A995EF; 
+  text-align: center; /* centra texto respecto a los limites de la celda */ 
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+}
+
+.celda6 {
+  background-color: #EF95E3; 
+  text-align: center; /* centra texto respecto a los limites de la celda */ 
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celda*/
+}
+
+
+/* PRIMERA PROMO - caja contenderora de la subgrid  */
+.cont-subgrid-celda1 {
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1px;
+    background-color: #ADF8F2;   /* morado claro */  
+    /* background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    max-width: 100%;  /* determina el ancho del contenedor */
+    border-radius: 7px; 
+}
+
+/* SEGUNDA PROMO - caja contenderora de la subgrid */
+.cont-subgrid-celda1_2 {
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1px;
+    background-color: #DEF7AD;   /* verde claro */  
+    /* background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    max-width: 100%;  /* determina el ancho del contenedor */
+    border-radius: 7px;
+}
+
+.cont-subgrid-celda1_3 {
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1px;
+    background-color: #F8F5A9;  
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    max-width: 100%;  /* determina el ancho del contenedor */
+    border-radius: 7px;
+}
+
+/* EMVOLTURAS ORIGINALES promo1 y promo2*/
+/*caja1, .caja2,.caja3,.caja4,.caja5,.caja6, .caja7, */
+ .caja1_2,.caja2_2,.caja3_2,.caja4_2,.caja5_2,.caja6_2, .caja7_2, .caja_adi1, .caja_adi2, .caja_adi3 {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;   
+   border: none;
+}
+
+
+#caja1-seleccionada, #caja2-seleccionada, #caja3-seleccionada{
+   width: 100%;
+   /*border: none; */
+   justify-self: stretch;
+}
+
+/* CAJAS MUESTRA ENVOLTURAS PROMO1-PROMO2 Y PROMO3  primeras columnas */
+#caja1, #caja2,#caja3,#caja4,#caja5,#caja6,#caja7,
+#caja1_3,#caja2_3,#caja3_3,#caja4_3,#caja5_3,#caja6_3,#caja7_3 {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;   
+   /*border-color: #F2D3F5;  /* PINTADO DE BORDE DE CADA COMBO*/ 
+   border: none;
+}
+
+/* COMBO ENVOLTURAS PARA CAMBIAR PROMO1 - PROMO2 - PROMO3 segundas columnas */
+#caja1_3,#caja2_3,#caja3_3,#caja4_3,#caja5_3,#caja6_3,#caja7_3,
+#id_env1_3, #id_env2_3, #id_env3_3, #id_env4_3, #id_env5_3, #id_env6_3, #id_env7_3,
+#id_env1, #id_env2, #id_env3, #id_env4, #id_env5, #id_env6, #id_env7,
+ #id_env1_2, #id_env2_2, #id_env3_2, #id_env4_2, #id_env5_2, #id_env6_2, #id_env7_2 {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;   
+   border-color: #F2D3F5;  /* PINTADO DE BORDE DE CADA COMBO*/ 
+}
+
+/* SUBTOTAL CAJAS -  PROMO1-PROMO2-PROMO3 Y SUBTOTAL ADICIONALES terceras columnas */
+.sub1_rell2, .sub2_rell2, .sub3_rell2, .sub4_rell2, .sub5_rell2, .sub6_rell2, .sub7_rell2,
+.sub1_rell, .sub2_rell, .sub3_rell, .sub4_rell, .sub5_rell, .sub6_rell, .sub7_rell,
+.sub1_rell3, .sub2_rell3, .sub3_rell3, .sub4_rell3, .sub5_rell3, .sub6_rell3, .sub7_rell3,  
+.subtot1_3,.subtot2_3,.subtot3_3,.subtot4_3,.subtot5_3,.subtot6_3,.subtot7_3,
+.subtot1, .subtot2,.subtot3,.subtot4,.subtot5, .subtot6,.subtot7,
+.subtot1_2, .subtot2_2,.subtot3_2,.subtot4_2,.subtot5_2, .subtot6_2,.subtot7_2,
+.sub1_adicio, .sub2_adicio, .sub3_adicio {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;   
+   border: none;
+   text-align: right;
+   border-color: #F2D3F5;  /* PINTADO DE BORDE DE CADA COMBO*/   
+}
+
+
+.valor-final {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}    
+
+
+.total-apago_ {
+  background-color: orange;
+  text-align: center;
+  /* border-radius: 9px; */
+  font-weight: bold;
+}
+
+.vtot_tot {
+  /*background-color:transparent;*/
+  text-align: center;
+  border-radius: 80px 20px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-color: #36F495;
+  border-right-color: 36F495;
+  border-bottom-color: #36F495;
+  border-left-color: #36F495;
+  width: 100px;
+}
+
+.vtot_aux {
+  background-color:white; 
+  text-align:right;
+}
+
+
+.subtot1 .subtot2 .subtot3 .subtot4 .subtot5 .subtot6 .subtot7 {
+  align:right;
+}
+
+/*caja contenderora de la subgrid RELLENOS PROMO1 */
+.cont-subgrid-celda2 {
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 7fr; 
+    max-width: 100%;   /* determina el ancho del contenedor */
+    background-color: #ADF8F2;   /* CELESTE claro */  
+    align-items: top;   /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 2rem; /* borde superior de la grid (o subgrid) c/respecto a su contenedor*/
+    max-width: 100%;    /* determina el ancho del contenedor */   
+}
+
+
+/*caja contenderora de la subgrid - RELLENOS PROMO2 */
+.cont-subgrid-celda2-2 {
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 7fr; 
+    max-width: 100%;  /* determina el ancho del contenedor */
+    /*grid-gap: 1px; */
+    background-color: #DEF7AD;   /* verde claro */  
+    /* background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 2rem; /* borde superior de la grid (o subgrid) c/respecto a su contenedor*/
+    /*flex-direction: column;
+    justify-content:space-between;*/
+    max-width: 100%;  /* determina el ancho del contenedor */   
+}
+
+/*caja contenderora de la subgrid - RELLENOS PROMO3 */
+.cont-subgrid-celda2-3 {
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 7fr; 
+    max-width: 100%;  /* determina el ancho del contenedor */
+    background-color: #F8F5A9;   /* verde claro */  
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 2rem; /* borde superior de la grid (o subgrid) c/respecto a su contenedor*/
+    max-width: 100%;  /* determina el ancho del contenedor */   
+}
+
+
+/* TITULO "PRIMERA PROMO" */
+.celda1 {
+  text-align: center;    
+  background: linear-gradient(#90E9E2, #EDFFFE);  
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* TITULO "SEGUNDA" C6EA7F,EBFACD*/
+.celda2 {
+  text-align: center;    
+  background: linear-gradient(#C6EA7F, #EBFACD);  
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  border-radius: 20px 20px 0px 0px;  
+}
+
+.celda3 {
+  text-align: center;    
+  background: linear-gradient(#EAE10F,#FCFACB);  
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  border-radius: 20px 20px 0px 0px;  
+}
+
+
+
+/* ENVOLTORIOS PROMOS ORIGINALES */
+#caja2-1, #caja2-2, #caja2-3, #caja2-4, #caja2-5, #caja2-6, #caja2-7 {
+    width: 80%; 
+    margin: 0 2px 3 1px;
+    /*border-color: #74CCF7; */
+}
+
+/* TITULOS tipo promo - cambios - subtotal*/
+.franja-horiz {
+  /* background-color: #CEDBD8;  */
+  color: #5D5D5C;  /* color del texto */
+}
+
+/*ENVOLTORIOS PROMO */
+.celda1-1 {
+    width:100%;
+    align-items: center;
+    margin: 0;
+    /*background-color: #CEDBD8; */
+}
+
+/* COMBO ENVOLTORIOS PARA CAMBIO */
+.celda1-2 {
+    width:100%;
+    align-items: center;
+    /*background-color:red;    */
+}
+
+/* COMBO RELLENOS PARA CAMBIO */
+.celda2-3 {
+    width:100%;
+    align-items: center;
+    /*background-color:orange; */
+}
+
+
+
+/* SUBTOTALES ENVOLTORIOS para todas las cajas */
+.celda1-3 {
+    width:100%;
+    align-items: center;
+    /*background-color: blue;  */
+}
+
+/*RELLENOS - RELLENOS - RELLENOS - RELLENOS - RELLENOS - RELLENOS - RELLENOS - RELLENOS - RELLENOS - RELLENOS - RELLENOS - */
+
+/*RELLENO DE CADA ROLL PROMO1 Y PROMO2*/
+#relle1, #relle2, #relle3, #relle4, #relle5, #relle6, #relle7, 
+#relle_tot, #relle1_2, #relle2_2, #relle3_2, #relle4_2, #relle5_2, #relle6_2, #relle7_2,#relle_tot_2 {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;  
+   border-color: #F2D3F5;
+}
+
+/*RELLENO DE CADA ROLL PROMO3 */
+#relle1_3, #relle2_3, #relle3_3, #relle4_3, #relle5_3, #relle6_3, #relle7_3,#relle_tot_3 {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;  
+   border-color: #F2D3F5;
+}
+
+/* COMBO RELLENOS disponibles para cambiar PROMO1 Y PROMO2 */
+/* #id_env1,#id_env2,#id_env3,#id_env4,#id_env5,#id_env6,#id_env7, */
+#relle1_tot, #relle2_tot, #relle3_tot, #relle4_tot, #relle5_tot, #relle6_tot, #relle7_tot,
+ #relle1_tot2, #relle2_tot2, #relle3_tot2, #relle4_tot2, #relle5_tot2, #relle6_tot2, #relle7_tot2,
+ #cant1_adicio, #cant2_adicio, #cant3_adicio {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;  
+   border-color: #F2D3F5;  /* PINTADO DE BORDE DE CADA COMBO*/ 
+}
+
+/* COMBO RELLENOS disponibles para cambiar PROMO3 */
+ #relle1_tot3, #relle2_tot3, #relle3_tot3, #relle4_tot3, #relle5_tot3, #relle6_tot3, #relle7_tot3 {
+   height: 26px;
+   width: 70%;
+   margin: 0 2px 3 1px;   
+   border-color: #F2D3F5;
+}
+
+
+/*rellenos de cada roll*/
+.celda2-2 {
+    width:100%;
+    align-items: center;
+}
+
+/* subtotal cambios rellenos */
+.celda2-4 {
+    /*grid-gap: 2px; /* espacio entre celdas*/
+    width:100%;   
+    align-items: center;
+}
+
+#carrito-icon-menu, #reloj {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}  
+
+/* SEGUNDA PROMO */
+.celdagrande-segundapromo, .celdagrande-tercerapromo {
+  text-align: left; /* centra texto horizontalmente respecto a los limites de la celda */   
+  padding:3px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+  margin-top: 0.5rem;   /* posiciona verticalmente la grid respecto al borde de este contenedor */  
+}
+
+/* SEGUNDA PROMO */
+.celdagrande-tercerapromo {
+  text-align: left; /* centra texto horizontalmente respecto a los limites de la celda */   
+  padding:3px;     /* espacio entre el texto (o foto) y el borde de la celada*/
+  margin-top: 0.5rem;   /* posiciona verticalmente la grid respecto al borde de este contenedor */  
+}
+
+
+
+
+.celda-adicionales {
+  /*CONTENEDORA DE LA SUBGRID*/
+  /* background-color: #FFFFFE; /*blanco*/
+  background-color: #EAE9E4; /* gris claro */
+  text-align: left; /* centra texto horizontalmente respecto a los limites de la celda */   
+  padding:3px;  /* espacio entre el texto y el borde de la celada*/
+  margin-top: 0.5rem;   /* posiciona verticalmente la grid respecto al borde de este contenedor */  
+  border-radius: 8px;
+}
+
+
+/* contenedora de las tres columnas de los adicionales */
+.subgrid_adicionales {
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1px;
+    background-color: #BFB7BC;   /* morado claro */  
+    /* background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    height: 150px;  /* alto de la caja contenedora */
+    max-width: 100%;  /* determina el ancho del contenedor */
+    border-radius: 0px 0px 20px 20px;
+    /*border-radius: 7px;*/
+}
+
+.subgrid_adicionales p {
+    margin-top: 1rem;
+}
+
+.titulo_adicionales {
+  text-align: center;    
+  background: linear-gradient(#426B75, #C3DBE1);  
+  padding:15px;  /* espacio entre el texto (o foto) y el borde de la celada*/
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* contendor de la subgrid - combo seleccionador y promos seleccionadas */ 
+.contenedor-seleccion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /* centra horizontal (flex-box) */
+    align-items: center; /* centra verticalmente*/  
+    grid-gap: 1px;
+    max-width: 400px;     /* ancho del contenedor */
+    height: 370px;        /* 300 alto */
+    text-align: center;   /* alinea horizontalmente*/
+    margin: auto;         /* alinea y centra respecto al HTML*/
+    background-color: #888887; /* gris */
+    border-radius: 15px;
+}
+
+
+/* contenedor de la sub-grid de objetos de promos seleccionadas */
+.contenedor-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 15%;
+    grid-template-rows: 1fr 40px 30px 1fr 1fr 1fr;
+    align-items: top;     /* para centrar verticalmente */
+    text-align: center;   /* centra texto horizontalmente respecto a los limites de la celda */   
+    height: 300px; 
+    width: 80%; 
+    padding:1.5rem; /* contorno c/respecto al contenedor */ 
+    grid-gap: 3px;
+    background-color: #E7E7BE; /* gris */
+    border-radius: 15px;
+}
+
+.cont-boton-seguir {
+   grid-column: 1 / 3;        /* parte en el eje1 1 y termina en el 3*/
+   /*background-color: #C3E3AA; /* verde claro */ 
+   height: 60px;              /*alto de la caja verdecita que contiene el boton*/
+   width:100%;
+   border: none;
+   margin:0;
+}
+
+ #btn-seguir {
+    grid-column: 1/3;  /* cominenza en el eje 1 y termina en el eje 3*/
+    align-items: center;       /* para centrar verticalmente el boton */
+    height: 30px;              /*alto de la caja verdecita que contiene el boton*/
+    margin-top: 4%;
+    width: 100%;
+}
+
+.peticion_final {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-gap: 2px;
+    background-color: #BFB7BC;   /* morado claro */  
+    /*background:linear-gradient(-90deg, red, white); */
+    /*align-items: top; /* para centrar verticalmente */
+    text-align: center; 
+    align-items: center; /* para centrar verticalmente */
+    padding-bottom: 25px;
+    height: 100px;  /* alto de la caja contenedora */
+    /*max-width: 100%;  /* determina el ancho del contenedor */
+    border-radius: 20px 20px 20px 20px;
+    /*border-radius: 7px;*/
+}
+
+
+/* caja de texto input */
+.input_peticion_final {
+  padding-left: 2rem;          
+  justify-self: center;
+  width: 90%; /* ancho de la caja de texto */
+}
+
+/* leyenda de "Alguna petición que no signifique valor adicional" */
+.peticion_final p {
+  margin-top: 1rem;
+}
+
+
+/* div contenedora */
+.recuerda {
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
+  margin-top: 1rem;  
+  margin:auto;  /* significa que ambos margenes son iguales por defecto*/
+}
+
+.recuerda p {
+  background-color: rgba(255,0, 0, 0);  /* fondo transparente */
+}
+
+.combo-aque-hora {
+  max-width: 50%;
+  color:#060606;
+}
+
+.recordatorio-transf {
+  background-color: #CEDBD8;  
+  color: #FA0321;
+}
+
+.cta-para-depositar {
+  color: #FA0321; 
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tot_final {
+  border-radius: 5px;
+  border: 0;
+  width: 100px;
+  height:20px;
+  text-align: right;
+}
+    
+.selecciona-hora_ {
+  background-color: rgba(255,0, 0, 0);  /* fondo transparente */
+  color: blue;
+  display: flex;
+  margin:auto;  /* significa que ambos margenes son iguales por defecto*/
+}
+
+
+/* opciones del administrador <contenedor padre> */
+.administrador {
+      display: grid; 
+      grid-template-columns: 4fr;
+      grid-template-rows: 2fr; 
+      background-color: #EAE9E4;  /* gris claro */
+      grid-gap: 10px; /* espacio entre celdas*/
+      padding: 2rem; /* espacio de contorno respecto al contenedor de la grid*/ 
+      width: 80%;    /* ancho del contenedor */
+      margin: auto;  /* alinea y centra respecto al HTML*/
+      /*flex-wrap: wrap; */
+      align-items: center;
+      margin-top: 12rem;   /* posiciona verticalmente respecto a la pantalla */
+  }
+
+/* Opciones del administrador del sistema */
+.administrador-titulo {
+      background: #BAFEC1; /* verde claro */
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem; 
+      color: blue;  
+      border-radius: 5px; 
+      height: 70px; /* alto de la franja que lleva el titulo verde */
+      text-align: center; 
+      /*margin-top: 2rem;   /* margen superior de la grilla c/respecto al contenedor */
+      padding: 8px;         /* espacio entre la grilla y el contenedor (section) */
+      width: 100%;          /* ancho respecto del contenedor */
+    }
+
+/* Las opciones son las siguientes:; */
+.administrador-titulo-opciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  /*background: #F46C8D;  /* rosado */
+  padding:0.5px;  /* da margen superior e inferior al texto */
+  /*font-weight: bold;  */
+}
+
+#inicializa-dia {
+  font-size: 1.4rem; 
+  color:#7A7FF3;  
+}
+
+
+/* SUB GRID cabeceras de la grid */
+.grid-cabeceras {
+    display: grid; 
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 3fr; 
+    grid-gap: 1px; 
+    /* background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 0rem; /* borde superior de la sub-grid (o subgrid) c/respecto a su contenedor*/
+    max-width: 100%;  /* determina el ancho del contenedor de la subgrid*/   
+    color: white; /* color texto de todos los elementos q' componen la subgrid */
+  }
+
+
+.celdas-sub-grid {
+    display: grid; 
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 3fr; 
+    grid-gap: 2px; 
+    /* background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 0rem; /* borde superior de la sub-grid (o subgrid) c/respecto a su contenedor*/
+    max-width: 100%;  /* determina el ancho del contenedor de la subgrid*/   
+    /*color: white; /* color texto de todos los elementos q' componen la subgrid */
+}
+
+.celdas-sub-grid-cuentas {
+    display: grid; 
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 3fr; 
+    grid-gap: 2px; 
+    /*background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 0rem; /* borde superior de la sub-grid (o subgrid) c/respecto a su contenedor*/
+    max-width: 100%;  /* determina el ancho del contenedor de la subgrid*/   
+    /*color: white; /* color texto de todos los elementos q' componen la subgrid */
+}
+
+.col-grid1, .col-grid2, .col-grid3, .col-grid4 {
+  background-color: #899EF3;  /* color de cada fila de la grid */  
+  height: 30px;  /* alto de cada fila de la grid*/
+  padding-top: 0.5rem;
+}
+
+
+.col-grid3-envolturas {
+  background-color: white;  /* color de cada fila de la grid */  
+  height: 30px;  /* alto de cada fila de la grid*/
+  padding-top: 0.5rem;
+  width: 80%; /* ancho de la caja de texto */ 
+  border:none;
+  text-align: right;
+  height: 20px;
+}
+
+/* cabeceras de la grid */
+.col1, .col2, .col3, .col4 {
+  background-color: blue;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.btn btn-primary {
+  height: 40px;  /* alto de cada fila de la grid*/  
+}
+
+.cuentas {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-gap: 1px;
+    /*background-color: #BFB7BC;   /* morado claro */  
+    text-align: center; 
+    align-items: center; /* para centrar verticalmente */
+    padding-bottom: 25px;
+    height: 110px;  /* alto de la caja contenedora */
+    max-width: 100%;  /* determina el ancho del contenedor */
+    border-radius: 20px 20px 20px 20px; */
+}
+
+.input_cuenta1, .input_cuenta2 {
+  padding-left: 2rem;          
+  justify-self: center;
+  width: 60%; /* ancho de la caja de texto */
+}
+
+.boton-graba, #btn-block {
+  padding-top: 2rem;
+  height:95px;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 20px 20px 20px 20px; 
+}
+
+.radiotrabajo {
+  display: flex;
+  flex-direction:row;
+  /*justify-content: space-between; */
+  justify-content:space-between;
+  padding: 4px;
+  background-color: #899EF3;
+  width: 100%;
+}
+
+.radio-formapago {
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding: 4px;
+  background-color: #899EF3;
+  width:30rem;
+}
+
+
+.Inicializa-dia {
+  /*background-color: yellow;  */
+  padding: 4px;
+  text-align:center;
+  background-color: #899EF3;  
+  width: 100%;
+}
+
+.revihora {
+  padding: 4px;
+  background-color: #899EF3;  
+}
+
+.titulo-galeria {
+  justify-content: center;   /* para centrar horizontalmente el boton */
+ }
+
+
+.chica {
+    width: 350px;
+    height: 200px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition:all 500ms ease;
+}
+ 
+.grande {
+    -webkit-transform: scale(1.8); 
+    -moz-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+    transition:all 500ms ease;
+    box-shadow:1px 7px rgba(0,0,0,0.6);
+    margin-top: 3px;
+}
+
+
+.c1 {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition:all 500ms ease;
+}
+
+.esconde {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition-duration: 0.8s;
+}
+
+
+/* SUB GRID cabeceras de la grid */
+.grid-cabe-admin-envolt {
+    display: grid; 
+    grid-template-columns: 1fr 60% 1fr;
+    /*grid-template-rows: 3fr; */
+    grid-gap: 1px; 
+    /* background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 0rem; /* borde superior de la sub-grid (o subgrid) c/respecto a su contenedor*/
+    max-width: 100%;  /* determina el ancho del contenedor de la subgrid*/   
+    color: white; /* color texto de todos los elementos q' componen la subgrid */
+  }
+
+.celdas-sub-grid-envolt {
+    display: grid; 
+    grid-template-columns: 1fr 60% 1fr;
+    /*grid-template-rows: 3fr; */
+    grid-gap: 2px; 
+    /*background:linear-gradient(-90deg, red, white); */
+    align-items: top; /* para centrar verticalmente */
+    text-align: center;
+    padding-top: 0rem; /* borde superior de la sub-grid (o subgrid) c/respecto a su contenedor*/
+    max-width: 100%;  /* determina el ancho del contenedor de la subgrid*/   
+    /*color: white; /* color texto de todos los elementos q' componen la subgrid */
+}
+
+.contendor-maximos-cambios {
+  display: flex;
+  flex-direction: columns;
+  margin-top: 0rem; /* espacio entre el contenedor y el objeto inmediatamente arriba (en este caso el titulo) */ 
+  background-color: #899EF3;  /* color de cada fila de la grid */ 
+  border-radius: 5px;
+  justify-content: space-evenly; 
+  padding: 6px;
+  height:95px;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.contendor-maximos-cambios p {
+  margin-top: 1.5rem;
+}
+
+.cambio-max1 {
+  margin-top: 1.5rem; 
+  width: 120px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.vtot_aux,.npromo,.var_valor1,.var_valor2 {
+  width: 90%;
+  text-align:right;
+  border-radius: 9px;
+  border:1px #B8B8B8 none;
+  background-color: #E6E2E9; /* color que ya tiene el tiene el tapiz de fondo*/
+  color: #E6E2E9;
+}
+
+.vtot {
+  width: 90%;
+  text-align:right;
+  border-radius: 9px;
+  border:1px #B8B8B8 none;
+}
+
+.signo-peso {
+  margin-top: 0.2rem;
+  width: 13px;  
+} 

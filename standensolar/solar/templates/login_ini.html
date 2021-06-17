@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Standensolar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- EL MISMO BLOQUE ANTERIOR PERO APLICANDO EL SISTEMA DE PLANTILLAS DJANGO-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login_ini/util.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login_ini/main.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/animate/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/select2/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+    
+    <link rel="shortcut icon" type="image/jpg" href="/static/img/logo_sc.jpg">
+
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+
+                <form class="login100-form validate-form" action="{% url 'login_ini' %}" method="POST">{% csrf_token %}
+
+                    <span class="login100-form-title p-b-33" style="font-size:28px; color:#098979">
+                        Identificacion
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        
+                        <!-- <input class="input100" type="text" name="email" placeholder="Email"> -->
+        
+                        <input type="text" class="input100" name="username" placeholder="Usuario" required="required">
+
+                        <span class="focus-input100-1"></span>
+                        <span class="focus-input100-2"></span>
+                    </div>
+
+                    <div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
+                        
+                        <!-- <input class="input100" type="password" name="pass" placeholder="Password"> -->
+                        <input type="password" class="input100" name="password" placeholder="Password" required="required" value="">
+
+                        <span class="focus-input100-1"></span>
+                        <span class="focus-input100-2"></span>
+                    </div>
+
+
+                   {% if error_log == "error" %}
+                        <p class="error1" style="color:red">usuario o password incorrecta o no está activo !!</p>
+                    {% endif %}    
+
+
+                    <div class="container-login100-form-btn m-t-20">
+                        <!--
+                        <button class="login100-form-btn">
+                            Sign in
+                        </button>
+                         -->
+                        <input type="submit" value="Ingresar" class="btn btn-primary login-btn btn-block"></input>        
+
+                    </div>
+
+                    <div>
+                    <a href="http://127.0.0.1:8000/admin/login/?next=/admin/" target="_blank">Admin</a>
+                    </div>    
+
+
+                    <div class="or-seperator">
+                        <i></i>
+                    </div>    
+
+
+                    <div class="text-center p-t-45 p-b-4">
+                        <span class="txt1">
+                            Standensolar Limitada
+                        </span>
+
+                        <!--    
+                        <a href="#" class="txt2 hov1">
+                            Username / Password?
+                        </a>
+                        -->
+
+                    </div>
+
+                    <!--        
+                    <div class="text-center">
+                        <span class="txt1">
+                            Create an account?
+                        </span>
+
+                        <a href="#" class="txt2 hov1">
+                            Sign up
+                        </a>
+                    </div>
+                    -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- EL MISMO BLOQUE ANTERIOR PERO APLICANDO EL SISTEMA DE PLANTILLAS DJANGO-->
+    <link rel="stylesheet" href="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/animsition/js/animsition.min.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/js/popper.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/select2/select2.min.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/daterangepicker/moment.min.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/daterangepicker/daterangepicker.js' %}">
+    <link rel="stylesheet" href="{% static 'vendor/countdowntime/countdowntime.js' %}">
+</body>
+</html>
