@@ -595,6 +595,7 @@ p {
       padding-top: 3rem;    /* margen sup. de la grid con respecto a su  */ 
       padding-bottom: 3rem;
       border-radius: 10px 10px 10px 10px;
+      align-items: center;
     }
      
     .capa-titulo {
@@ -607,29 +608,23 @@ p {
       font-family: 'Poppins', sans-serif;
       font-size: 2rem; 
       text-align: center;
-      margin-top: 6rem;   /* posiciona verticalmente el titulo respecto a la pantalla */
+      margin-top: 8rem;   /* posiciona verticalmente el titulo respecto a la pantalla */
       padding: 18px;  /* centra el texto verticalmente */
     }
 
 
-    .capa-titulo #disponibilidad {
+    .capa-titulo, .horas {
       text-align:center;
       font-size: 1.8rem;
       width:100%;
       /*background-color: red; */
     }
 
-    .capa-titulo #cerrar {
+    .capa-titulo {
       /*background: blue;*/
       font-size: 17px; 
     }
 
-    .capa-titulo #horas {
-      grid-column-start: 1; 
-      grid-column-end: 4;
-      /*text-align:center;*/
-      /*background-color: blue;*/
-    }
 
     /* contenedor de GRID GRANDE */
     .valorizacion {

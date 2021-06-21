@@ -8,22 +8,26 @@
   <!-- IMAGENES DE TODAS LAS PROMOS -->
   <div  class = "personas"> 
       <div class = "capa-titulo">    
-          <div id="fantasma"></div> 
- 
-          {% if request.user.is_staff %}
-            <div id="cerrar">
-                  <u align="right"><a href="{% url 'log_out' %}">Cerrar sesion</a></u>
-            </div>
+          <div id="fantasma"></div>  
+
+          <div id="horas" class="horas">
+            <p>Asesoria, Diseño e instalación de Sistemas Fotovoltáicos y Termosolares</p>
+          </div>
+
+
+          <div class = "cerrar_sesion">
+           {% if request.user.is_staff %}
+              <div id="cerrar">
+                <u align="right"><a href="{% url 'log_out' %}">Cerrar sesion</a></u>
+              </div>
           {% else %}
               <a></a>
           {% endif %}
-
-          <div id="horas">
-            <p>Revisa nuestro proyectos</p>
           </div>
 
       </div>
   
+      <!-- Set de fotografias -->
       <div class="contenedor">  
           <article class="persona__columna">
               <a title="promo de 20">
