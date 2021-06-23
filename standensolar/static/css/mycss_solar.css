@@ -1684,3 +1684,60 @@ p {
   margin-top: 0.2rem;
   width: 13px;  
 } 
+
+.placa_solar {
+   display: flex;
+   flex-direction: column;
+   justify-item: center;
+   /* background-color: yellow; */
+   padding-top: 3rem;    /* margen sup. de la grid con respecto a su  */ 
+   padding-bottom: 3rem;
+   border-radius: 10px 10px 10px 10px;
+   align-items: center;
+ }
+
+placa_solar, .contain{
+  object-fit: contain;
+}
+
+.que_necesitas {
+  margin-top: 7rem;
+  color: red;
+  font-weight:bold;
+  font-size:24;
+}
+
+.solucion_para {
+   margin-top: 2rem;
+   color: #A89CAA;
+   font-size:18;
+}
+
+.subtit_redondos_ {
+   display: flex;
+   flex-direction:rows;
+   /* justify-item: center; */
+   align-items: center;
+   color: red;
+   font-weight:bold;
+   font-size:18;
+   background-color: yellow;
+   with:75%;
+}
+
+.grid_chica {
+      display: grid; 
+      grid-template-columns: 1fr;
+      grid-template-rows: 80% 20%;
+      /* width:75%; */
+      margin: auto;   /* alinea y centra equitativamente respecto al HTML*/
+      justify-item: center;
+      background-color: #EAE9E4; 
+      /* background-color: yellow; */
+      padding-top: 3rem;    /* margen sup. de la grid con respecto a su  */ 
+      padding-bottom: 3rem;
+      border-radius: 10px 10px 10px 10px;
+      align-items: center;
+      flex-wrap: wrap;
+}
+
