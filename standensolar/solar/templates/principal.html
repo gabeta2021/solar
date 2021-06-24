@@ -5,14 +5,14 @@
 <form method = "POST" action="" onsubmit="return val_eligio()"> 
   {% csrf_token %}
 
-<!-- pagina de WIX: https://standensolar.wixsite.com/website-5 -->
+<!-- pagina prototipo de WIX: https://standensolar.wixsite.com/website-5 -->
   <!-- IMAGENES DE TODAS LAS PROMOS -->
   <div  class = "personas"> 
       <div class = "capa-titulo">    
           <div id="fantasma"></div>  
 
           <div id="horas" class="horas">
-            <p>Asesoria, Diseño e instalación de Sistemas Fotovoltáicos y Termosolares</p>
+            <p>La Energía limpia del Futuro</p>
           </div>
 
           <div class = "cerrar_sesion">
@@ -34,86 +34,85 @@
           <span>Hay una solucion para cada necesidad</span>
       </div>  
 
-
       <div class="contenedor">
           <div class="grid_chica">
-              <img src="/static/img/redondo1.jpg" />
-              <span>Sistema de Bombeo Solar</span>
+              <img src="{{path_static_img}}redondo1.jpg"/>
+              <span class="subtit_rojo">Sistema de Bombeo Solar</span>
+              <span class="subtit">Pozos, Estanques y Riegos</span>
           </div>
 
           <div class="grid_chica">
-            <img src="/static/img/redondo2.jpg" />
-            <span>Sistemas Solares Termicos</span>
+            <img src="{{path_static_img}}redondo2.jpg" />
+            <span class="subtit_rojo">Sistemas Solares Termicos</span>
+            <span class="subtit">Agua Caliente Sanitaria y Piscinas</span>
           </div>
 
           <div class="grid_chica">
-            <img src="/static/img/redondo3.jpg"/>
-            <span>Sistemas Solares Fotovoltaicos</span>            
+            <img src="{{path_static_img}}redondo3.jpg"/>
+            <span class="subtit_rojo">Sistemas Solares Fotovoltaicos</span>    
+            <span class="subtit">Ahorro (On Grid) y Respaldo (Off Grid)</span>        
           </div>
       </div>
  
       <div class="placa_solar" id ="placa_solar">
-          <img src="/static/img/placa_solar.jpg" />
+          <img src="{{path_static_img}}placa_solar.jpg" />
       </div>  
   
-      <!-- Set de fotografias -->
+      <!-- Set de fotografias --------------------------------------------->
       <div class="contenedor">  
           <article class="persona__columna">
               <a title="promo de 20">
-                <img src="/static/img/fig1.jpg" />
+                <!-- <img src="/static/img/fig1.jpg"/> -->
+                <img src="{{path_static_img}}fig1.jpg"/>
               </a>
           </article>
 
           <article class="persona__columna">
               <a title="promo de 30">
-                <img src="/static/img/fig2.jpg" />
+                <img src="{{path_static_img}}fig2.jpg" />
               </a>
           </article>
 
           <article class="persona__columna">
               <a title="promo de 30">
-                <img src="/static/img/fig3.jpg" />
+                <img src="{{path_static_img}}fig3.jpg" />
               </a>
           </article>
 
           <article class="persona__columna">
               <a title="promo de 40">
-                <img src="/static/img/fig4.jpg" />
+                <img src="{{path_static_img}}fig4.jpg" />
               </a>
           </article>
 
           <article class="persona__columna">
               <a title="promo de 50">
-                <img src="/static/img/fig5.jpg" />
+                <img src="{{path_static_img}}fig5.jpg" />
               </a>
           </article>
 
           <article class="persona__columna">
               <a title="promo de 60">
-                <img src="/static/img/fig6.jpg" />
+                <img src="{{path_static_img}}fig6.jpg" />
               </a>
           </article>
 
           <div>
-          {% if var_valor1 != 0 %}  
-            <p href="#" onclick="oculta_muestra()" class="btn btn-primary" id="disparador" title ="si quiere cambios">Ver más</p>
-          {% endif %}
-        </div>
+            <p href="#" onclick="oculta_muestra()" id="disparador" class="btn btn-primary" title ="si quiere cambios">Ver más</p>
+          </div>
     
-        <div id="c1" class="c1" style="display:none" >
-          <article class="persona__columna">
+          <article class="persona__columna" id="c1" style="display: none;">
               <a title="promo de 60">
-                <img src="/static/img/fig6.jpg" />
+                <img src="{{path_static_img}}fig6.jpg" />
               </a>
           </article>
 
-        </div>
-
-
-
-
+          <article class="persona__columna" id="c2" style="display: none;">
+              <a title="promo de 60">
+                <img src="{{path_static_img}}fig1.jpg" />
+              </a>
+          </article>
       </div> <!--FIN contendor de fotos -->
-
   </div>  <!-- personas -->
 
 </form> 

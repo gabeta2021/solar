@@ -40,13 +40,13 @@ def log_out(request):
 	#return HttpResponse("Se ha abandonado la aplicación...")
 
 def principal(request):
-    #return HttpResponse(str(request.user.is_staff))
     variable1 = 'PAGINA PRINCIPAL'
-    logo2 = "/static/img/logo_ss.jpg"
-    #logo = "/staticfiles/img/Logo_AsistenciaIntegral.jpg" # for PythonAnyWhere
-       
+    path_static_img = "/static/img/"
+    #path_static_img = "/staticfiles/img/" # para pythonAnywhere
+    logo2 = path_static_img+"logo_ss.jpg"
     context ={
         "variable1":variable1,
+        "path_static_img":path_static_img,
         "logo_corp_chico":logo2,}
 
     if request.method == "POST":   # va a: CAMBIOS.HTML

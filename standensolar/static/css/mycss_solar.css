@@ -1701,7 +1701,7 @@ placa_solar, .contain{
 }
 
 .que_necesitas {
-  margin-top: 7rem;
+  margin-top: 5rem;
   color: red;
   font-weight:bold;
   font-size:24;
@@ -1713,17 +1713,6 @@ placa_solar, .contain{
    font-size:18;
 }
 
-.subtit_redondos_ {
-   display: flex;
-   flex-direction:rows;
-   /* justify-item: center; */
-   align-items: center;
-   color: red;
-   font-weight:bold;
-   font-size:18;
-   background-color: yellow;
-   with:75%;
-}
 
 .grid_chica {
       display: grid; 
@@ -1740,4 +1729,18 @@ placa_solar, .contain{
       align-items: center;
       flex-wrap: wrap;
 }
+
+.grid_chica , .subtit_rojo {
+  color: red;
+  font-weight:bold;
+  font-size:18;
+}
+
+.grid_chica, .subtit {
+   color: #A89CAA;
+   font-size:15;
+}
+
+
+
 

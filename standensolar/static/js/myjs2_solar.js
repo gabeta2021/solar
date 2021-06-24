@@ -1511,10 +1511,7 @@ function clic_img() {
 }
 
 function oculta_muestra() {
-	var prom1 = document.getElementById("c1");
-	var prom2 = document.getElementById("c2");
-	var prom3 = document.getElementById("c3");
-    /*
+	/*
 	var tieneclase = prom1.classList.contains( 'c1' );  /* entrega: true o false 
 	if(tieneclase==true){
 		document.getElementById("c1").className = "esconde"; /* cambia el nombre de la clase, pero el id sigue siendo c1 
@@ -1523,17 +1520,23 @@ function oculta_muestra() {
 	}
 	*/
 
+	if(document.getElementById('disparador').textContent == 'Ver más'){
+		document.getElementById('disparador').textContent == 'Esconde';
+	}else{
+		document.getElementById('disparador').textContent == 'Ver más';
+	}	
+
 	if(document.getElementById('c1').style.display == 'none') {
 		$("#c1").show("slowly");
  		document.getElementById('c1').style.display = 'block';
  		document.getElementById('c2').style.display = 'block';
  		document.getElementById('c3').style.display = 'block';
+ 		document.getElementById('disparador').textContent = 'Esconde';
  	} else {
   		document.getElementById('c1').style.display = 'none';
  		document.getElementById('c2').style.display = 'none';
  		document.getElementById('c3').style.display = 'none';
  	}
-
 }
 
 
