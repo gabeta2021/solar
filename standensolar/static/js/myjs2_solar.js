@@ -1510,7 +1510,7 @@ function clic_img() {
 	}
 }
 
-function oculta_muestra() {
+function oculta_muestra_() {
 	/*
 	var tieneclase = prom1.classList.contains( 'c1' );  /* entrega: true o false 
 	if(tieneclase==true){
@@ -1519,26 +1519,27 @@ function oculta_muestra() {
 		document.getElementById("c1").className = "c1";  /* cambia el nombre de la clase, pero el id sigue siendo c1 
 	}
 	*/
-
-	if(document.getElementById('disparador').textContent == 'Ver más'){
-		document.getElementById('disparador').textContent == 'Esconde';
-	}else{
-		document.getElementById('disparador').textContent == 'Ver más';
-	}	
-
-	if(document.getElementById('c1').style.display == 'none') {
-		$("#c1").show("slowly");
+	if(document.getElementById('contenedor2').style.display == 'none') {
  		document.getElementById('c1').style.display = 'block';
  		document.getElementById('c2').style.display = 'block';
- 		document.getElementById('c3').style.display = 'block';
- 		document.getElementById('disparador').textContent = 'Esconde';
+		document.getElementById('c3').style.display = 'block';
  	} else {
   		document.getElementById('c1').style.display = 'none';
  		document.getElementById('c2').style.display = 'none';
- 		document.getElementById('c3').style.display = 'none';
+		document.getElementById('c3').style.display = 'none';
+ 		/*document.getElementsByid("disparador").textContent == 'Ver más';*/
  	}
 }
 
+/* contenedor2 es la capa CONTENDEDORA, segunda grid MUESTRA/ESCONDE */
+function oculta_muestra() {
+	if(document.getElementById('contenedor2').style.display == 'none') {
+		$("#contenedor2").show("slowly");
+ 		$("#contenedor2").show();
+ 	} else {
+ 		$("#contenedor2").hide();
+ 	}
+}
 
 /* En el template: columna1 es ID = codigo, columna2 es ID = corr */
 function inicializa_dia(xx,yy) {
@@ -1548,39 +1549,4 @@ function inicializa_dia(xx,yy) {
 		}
 	}
 }
-
-
-/*
-$(document).ready(function () {
-	$("#c1").click(function() {
-		$("#c1").show("slow");
-	});
-
-	$("#esconde").click(function() {
-		$("#c1").hide("slow");
-	});
-
-});
-*/
-
-/* ES LLAMADA DESDE LA LINEA 921  */
-function sweetalert_maximocambio(cmb,nprom) {
-	var entrega_x = false;
-  	var maxcamb_envolt = document.getElementById("var_valor1").value; /* trae el max cambio q debe hacerse x definicion*/	
-	var max_env = ncambios_yahechos(nprom);  /* cambios ya hechos a la promo 'npromo' */
-	/* Nota: cmb=0, implica que esa seleccion fue "--cambia por--" */
-	if(cmb!=0){
-   		if(max_env+1 > maxcamb_envolt) {
-			Swal.fire({
-	  		position: 'top-end',
-	  		icon: 'error',
-	  		title: 'Has completado el máximo de cambios, que es de '+maxcamb_envolt+' por promoción', 
-	  		showConfirmButton: true,
-	  		confirmButtonText: 'Aceptar',
-			})
-  			entrega_x = true;
-   		}
-   	}	
-	return entrega_x;
-}	
 

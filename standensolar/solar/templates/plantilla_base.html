@@ -23,7 +23,6 @@
     <!-- <link rel="stylesheet" href="{% static 'css/mycss.css' %}">  -->
     <link rel="stylesheet" href="{% static 'css/mycss_solar.css' %}">  
 
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
@@ -54,6 +53,9 @@
     <link rel="shortcut icon" type="image/jpg" href="/static/img/logo_sc.jpg"> 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- para hacer responsivas las imagenes -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" /> 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
@@ -92,7 +94,6 @@
         baguetteBox.run('.tz-gallery');  
     </script>    
 
-
     <!-- <div class="cajaflex"> -->
     <footer class="footer">
         <div class="footer-texto1">
@@ -103,11 +104,10 @@
             {% endfor %}
         </div>
                 
-        <div class="footer-texto3">
-            <a title="Mapa de ubicación">
-               <img src="/static/img/mapa.jpg" id="img" class="chica" onclick="return clic_img();"/> 
-            </a>
+        <div class="grid_chica">
+            <img src="{{path_static_img}}mapa.jpg" id="img" class="chica" onclick="return clic_img();"/> 
         </div>
+
 
         <div class="footer-texto2">
             {% for ob1 in obs %}

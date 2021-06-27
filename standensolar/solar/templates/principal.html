@@ -2,27 +2,21 @@
 {% load static %}
 {% block content %}
 
-<form method = "POST" action="" onsubmit="return val_eligio()"> 
+<form method = "POST"> 
   {% csrf_token %}
-
-<!-- pagina prototipo de WIX: https://standensolar.wixsite.com/website-5 -->
-  <!-- IMAGENES DE TODAS LAS PROMOS -->
-  <div  class = "personas"> 
+  <!-- pagina prototipo de WIX: https://standensolar.wixsite.com/website-5 -->
+  <div class = "personas"> 
       <div class = "capa-titulo">    
-          <div id="fantasma"></div>  
-
-          <div id="horas" class="horas">
-            <p>La Energía limpia del Futuro</p>
+          <!-- <div id="fantasma"></div>  -->
+          <div class="cerrar_sesion">
+              {% if request.user.is_staff %}
+                <u><a href="{% url 'log_out' %}">Cerrar sesion</a></u>
+              {% else %}
+                <a></a>
+              {% endif %}
           </div>
-
-          <div class = "cerrar_sesion">
-           {% if request.user.is_staff %}
-              <div id="cerrar">
-                <u align="right"><a href="{% url 'log_out' %}">Cerrar sesion</a></u>
-              </div>
-          {% else %}
-              <a></a>
-          {% endif %}
+          <div id="horas" class="horas">
+              <p>La Energía Limpia del Futuro</p>
           </div>
       </div>
       
@@ -42,27 +36,35 @@
           </div>
 
           <div class="grid_chica">
-            <img src="{{path_static_img}}redondo2.jpg" />
-            <span class="subtit_rojo">Sistemas Solares Termicos</span>
-            <span class="subtit">Agua Caliente Sanitaria y Piscinas</span>
+              <img src="{{path_static_img}}redondo2.jpg" />
+              <span class="subtit_rojo">Sistemas Solares Termicos</span>
+              <span class="subtit">Agua Caliente Sanitaria y Piscinas</span>
           </div>
 
           <div class="grid_chica">
-            <img src="{{path_static_img}}redondo3.jpg"/>
-            <span class="subtit_rojo">Sistemas Solares Fotovoltaicos</span>    
-            <span class="subtit">Ahorro (On Grid) y Respaldo (Off Grid)</span>        
+              <img src="{{path_static_img}}redondo3.jpg"/>
+              <span class="subtit_rojo">Sistemas Solares Fotovoltaicos</span>    
+              <span class="subtit">Ahorro (On Grid) y Respaldo (Off Grid)</span>        
           </div>
       </div>
  
+      <!--
       <div class="placa_solar" id ="placa_solar">
           <img src="{{path_static_img}}placa_solar.jpg" />
       </div>  
+      -->
+
+      <div class="placa_solar">
+          <figure>
+            <img class="img-fluid rounded d-block m-l-none" src="{{path_static_img}}placa_solar.jpg"/>
+          </figure>
+      </div>  
+
   
       <!-- Set de fotografias --------------------------------------------->
-      <div class="contenedor">  
+      <div class="contenedor">      
           <article class="persona__columna">
               <a title="promo de 20">
-                <!-- <img src="/static/img/fig1.jpg"/> -->
                 <img src="{{path_static_img}}fig1.jpg"/>
               </a>
           </article>
@@ -96,24 +98,117 @@
                 <img src="{{path_static_img}}fig6.jpg" />
               </a>
           </article>
+      </div>    
 
-          <div>
-            <p href="#" onclick="oculta_muestra()" id="disparador" class="btn btn-primary" title ="si quiere cambios">Ver más</p>
-          </div>
+      <div> 
+          <button type="button" onclick="oculta_muestra()" id="disparador" class="button ghost">Ver más / Oculta</button>
+      </div>
+
+      <div id="contenedor2" class="contenedor2" style="display: none;">
+          <!-- <div class="subgrid1"> -->
+              <div>
+                  <a title="fig7" id="c1">
+                    <img src="{{path_static_img}}fig7.jpg"/>
+                  </a>
+              </div>
     
-          <article class="persona__columna" id="c1" style="display: none;">
-              <a title="promo de 60">
-                <img src="{{path_static_img}}fig6.jpg" />
-              </a>
-          </article>
+              <div>
+                  <a title="fig8" id="c2">
+                    <img src="{{path_static_img}}fig8.jpg" />
+                  </a>
+              </div>
+    
+              <div>
+                  <a title="fig9" id="c3">
+                    <img src="{{path_static_img}}fig9.jpg" />
+                  </a>
+              </div>
 
-          <article class="persona__columna" id="c2" style="display: none;">
-              <a title="promo de 60">
-                <img src="{{path_static_img}}fig1.jpg" />
+              <div>
+              <a title="fig10">
+                <img src="{{path_static_img}}fig10.jpg" />
               </a>
-          </article>
-      </div> <!--FIN contendor de fotos -->
+              </div>
+    
+              <div>
+              <a title="fig11">
+                <img src="{{path_static_img}}fig11.jpg" />
+              </a>
+              </div>
+    
+              <div>
+              <a title="fig12">
+                <img src="{{path_static_img}}fig12.jpg" />
+              </a>
+              </div>
+    
+              <div>
+              <a title="fig13">
+                <img src="{{path_static_img}}fig13.jpg" />
+              </a>
+              </div>
+
+              <div>
+              <a title="fig14">
+                <img src="{{path_static_img}}fig14.jpg" />
+              </a>
+              </div>
+
+              <div>
+              <a title="fig15">
+                <img src="{{path_static_img}}fig15.jpg" />
+              </a>
+              </div>
+
+              <div>
+              <a title="fig16">
+                <img src="{{path_static_img}}fig16.jpg" />
+              </a>
+              </div>
+
+              <div>
+              <a title="fig17">
+                <img src="{{path_static_img}}fig17.jpg" />
+              </a>
+              </div>
+
+              <div>
+              <a title="fig18">
+                <img src="{{path_static_img}}fig18.jpg" />
+              </a>
+              </div>
+
+              <div>
+              <a title="fig19">
+                <img src="{{path_static_img}}fig19.jpg" />
+              </a>
+              </div>
+
+              <div>
+              <a title="fig20">
+                <img src="{{path_static_img}}fig20.jpg" />
+              </a>
+              </div>
+    
+              <div>
+              <a title="fig21">
+                <img src="{{path_static_img}}fig21.jpg" />
+              </a>
+              </div>
+    
+              <div>
+              <a title="fig22">
+                <img src="{{path_static_img}}fig22.jpg" />
+              </a>
+              </div>
+    
+              <div>
+              <a title="fig23">
+                <img src="{{path_static_img}}fig23.jpg" />
+              </a>
+              </div>
+          <!--</div> fin capa de grid2 -->
+      </div> <!--FIN contendor de fotos etapa 2 -->
   </div>  <!-- personas -->
-
 </form> 
 {% endblock %}          

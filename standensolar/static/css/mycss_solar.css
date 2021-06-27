@@ -79,6 +79,7 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size:2rem;
 }
 
 .navigation ul li {
@@ -128,11 +129,17 @@ p {
    margin-left: 1rem; 
    margin-right: 1rem;
    color: white;
-   background: #476D6B;
-   padding:10px;
+   /* background: #476D6B;*/
+   background: yellow;
+   /*padding:10px;*/
    border-radius: 5px;
    text-align: center; 
+   position:relative;
  }
+
+.img {
+  display:block;
+}
 
 .footer-texto3_ a img:hover { 
   width: 100%;
@@ -207,51 +214,28 @@ p {
       /* verde claro */
       .capa-titulo {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;    
+          grid-template-columns: 1fr;
           grid-template-rows: 50% 50%;
           background: #BAFEC1; /* verde claro */
           /*height: 100%;        /* alto de la franja que lleva el titulo verde */
           margin-top: 9.5rem;  /* posiciona verticalmente el titulo respecto a la pantalla */
-          color: blue;    /* letra del texto*/
-          font-size: 1.5rem; 
           text-align: center;
           width:100%;
           padding: 2rem;
           border-radius: 0px 0px 15px 15px; 
       }
 
-      .capa-titulo #fantasma {
-          padding: 0rem;
-          width:100%;
-          /*background-color: red;*/
-      } 
-
-       .capa-titulo #disponibilidad {
-          text-align:center;
-          font-size: 1.8rem;
-          width:100%;
-          /*background-color: white;*/
-      }
-
-      .capa-titulo #cerrar {
-          font-size: 15px; 
-          text-align: right;
-          width:100%;
-          /*background-color: orange;*/
-      }
-
-      .capa-titulo #horas {
-        grid-column-start: 1;
-        grid-column-end: 4;
+      .horas {
         text-align: center;
+        font-size: 2rem;
         padding: 15px; 
         /*border-right: 25px;*/
+        color: blue;
         width:100%;
-        /*background-color:#EABEF2; /*morado claro*/
       }
 
       /* marco que contiene la grid (imagenes) */
-      .contenedor {
+      .contenedor, .contenedor2 {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 3px;
@@ -261,13 +245,13 @@ p {
         border: 1px;
         padding-top: 3rem;    /* margen sup. de la grid con respecto a su contenedor*/ 
         padding-bottom: 3rem;
-        background-color: #EAE9E4;
+        background-color:#EAE9E4; 
         border-radius: 10px 10px 10px 10px;
         with:95%;
       }
 
       /* PRINCIPAL - promos */
-      .personas .contenedor {
+      .personas, .contenedor{
           grid-template-columns: repeat(1,1fr); 
           /*align-items: center; */      
           /*background: #F20707; /*rojo para pruebas */    
@@ -276,7 +260,7 @@ p {
           margin-top: 1rem;
           /* margin:auto; */
       }
-    
+
       /* TRATAMIENTO DE IMAGEN DE PROMO SELECCIONADA PARA PEDIR */
       /* maximo agrandamiento de la imagen */
       .promo-pedida a img:hover { 
@@ -584,7 +568,7 @@ p {
     }
   
     /* marco que contiene la grid (fotos) */
-    .contenedor {
+    .contenedor, .contenedor2 {
       display: grid; 
       grid-template-columns: 1fr 1fr 1fr;
       width:85%; 
@@ -597,34 +581,37 @@ p {
       border-radius: 10px 10px 10px 10px;
       align-items: center;
     }
-     
+
+    .placa_solar {
+      display: grid; 
+      grid-template-columns: 1fr;
+      width:85%; 
+      margin: auto;   /* alinea y centra equitativamente respecto al HTML*/
+      justify-item: center;
+      padding-top: 2rem;    /* margen sup. de la grid con respecto a su  */ 
+      padding-bottom: 3rem;
+      align-items: center;
+    }
+
     .capa-titulo {
       display: grid;
-      grid-template-columns: 1fr 3fr 1fr;    /* a partir de la columna 1 toma 3 columnas*/
+      grid-template-columns: 1fr; 
+      grid-template-rows: 2fr; 
       background: #BAFEC1; /* verde claro */
       height: 80px; /* alto de la franja que lleva el titulo verde */
       border-radius: 5px; 
-      color: blue;   /* color del texto */
-      font-family: 'Poppins', sans-serif;
-      font-size: 2rem; 
-      text-align: center;
+      /*font-family: 'Poppins', sans-serif; */
       margin-top: 8rem;   /* posiciona verticalmente el titulo respecto a la pantalla */
       padding: 18px;  /* centra el texto verticalmente */
     }
-
 
     .capa-titulo, .horas {
       text-align:center;
       font-size: 1.8rem;
       width:100%;
-      /*background-color: red; */
+      color: blue;   /* color del texto */
+      font-weight:bold;
     }
-
-    .capa-titulo {
-      /*background: blue;*/
-      font-size: 17px; 
-    }
-
 
     /* contenedor de GRID GRANDE */
     .valorizacion {
@@ -652,7 +639,7 @@ p {
         /*background-color: #C3E3AA;  /* verde claro */ 
     }
 
-  .form-register {
+    .form-register {
       width: 350px;
       background: #24303c;
       padding: 30px;
@@ -662,29 +649,27 @@ p {
       font-family: 'calibri';
       color:white;
       box-shadow: 7px 13px 37px #000;
-  }
+    }
 
+    .contendor-inicial {
+      display: grid; 
+      grid-template-columns: 30% auto 15%;
+      grid-template-rows: 1fr; 
+      padding:6px; /* espacio de los elementos con el contenedor*/
+      border:1px #B8B8B8 solid;
+      border-radius: 10px;
+    }
 
-  .contendor-inicial {
-    display: grid; 
-    grid-template-columns: 30% auto 15%;
-    grid-template-rows: 1fr; 
-    padding:6px; /* espacio de los elementos con el contenedor*/
-    border:1px #B8B8B8 solid;
-    border-radius: 10px;
-  }
-
-  .forma-pago-delcliente {
-    display: flex;
-    flex-direction:column;
-    align-items: center; 
-    padding:10px;          /* espacio de los elementos con el contenedor*/
-    border:1px #B8B8B8 solid;
-    border-radius: 10px;
-    margin:auto;  /* significa que ambos margenes son iguales por defecto*/
-    width: 55%;
-  }
-
+    .forma-pago-delcliente {
+      display: flex;
+      flex-direction:column;
+      align-items: center; 
+      padding:10px;          /* espacio de los elementos con el contenedor*/
+      border:1px #B8B8B8 solid;
+      border-radius: 10px;
+      margin:auto;  /* significa que ambos margenes son iguales por defecto*/
+      width: 55%;
+    }
 }
 /* fin responsive 1025px*/
 
@@ -712,8 +697,6 @@ p {
     margin-top: 2rem; /*gag*/
     border-radius: 20px;
 }
-
-
 
 /* TRATAMIENTO DE IMAGEN DE PROMO SELECCIONADA PARA PEDIR */
  /* Agrandamiento de la imagen de la promo */
@@ -869,8 +852,6 @@ p {
   margin-top: 0.5rem;   /* posiciona verticalmente la grid respecto al borde de este contenedor */  
   border-radius: 8px;
 }
-
-
 
 .celda2, .celda3  {
   background-color: #AEAFAC; 
@@ -1685,7 +1666,7 @@ p {
   width: 13px;  
 } 
 
-.placa_solar {
+.placa_solar_ {
    display: flex;
    flex-direction: column;
    justify-item: center;
@@ -1694,11 +1675,13 @@ p {
    padding-bottom: 3rem;
    border-radius: 10px 10px 10px 10px;
    align-items: center;
+   width: 60%;
  }
 
-placa_solar, .contain{
+placa_solar, .contain {
   object-fit: contain;
 }
+
 
 .que_necesitas {
   margin-top: 5rem;
@@ -1713,21 +1696,20 @@ placa_solar, .contain{
    font-size:18;
 }
 
-
 .grid_chica {
-      display: grid; 
-      grid-template-columns: 1fr;
-      grid-template-rows: 80% 20%;
-      /* width:75%; */
-      margin: auto;   /* alinea y centra equitativamente respecto al HTML*/
-      justify-item: center;
-      background-color: #EAE9E4; 
-      /* background-color: yellow; */
-      padding-top: 3rem;    /* margen sup. de la grid con respecto a su  */ 
-      padding-bottom: 3rem;
-      border-radius: 10px 10px 10px 10px;
-      align-items: center;
-      flex-wrap: wrap;
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    /* width:75%; */
+    margin: auto;   /* alinea y centra equitativamente respecto al HTML*/
+    justify-item: center;
+    background-color: #EAE9E4; 
+    /* background-color: yellow; */
+    padding-top: 3rem;    /* margen sup. de la grid con respecto a su  */ 
+    padding-bottom: 3rem;
+    border-radius: 10px 10px 10px 10px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .grid_chica , .subtit_rojo {
@@ -1738,9 +1720,12 @@ placa_solar, .contain{
 
 .grid_chica, .subtit {
    color: #A89CAA;
-   font-size:15;
+   font-size:15%;
 }
 
-
-
-
+.cerrar_sesion {
+   /*color: blue;       /* color del texto */
+   font-size:1.5rem;    /* tamaño de la letra */
+   text-align: right; 
+   font-weight: normal;  /* no bold */
+}
