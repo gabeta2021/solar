@@ -1,7 +1,7 @@
 /* Nota: ID (#)  y clases (.), (gato y punto respectivamente) */
 /* Toda funcion que haga alusion a AJAX no hay que subirla a PythonAnywhere */
 /* pues dará un error 404 */
-/* ----------------- */  
+/* ----------------  */  
 
 function llenacaja(){
 	var fini = $('#datepicker').val();
@@ -14,7 +14,6 @@ function llenacaja(){
 	var fenac = fenac.slice(6,10)+"-"+fenac.slice(0, 2)+"-"+fenac.slice(3, 5);
    	document.getElementById("datepicker2").value=fenac;
 	}
-
 
 function prueba() {
 	var x = document.getElementById("rut").value
@@ -1484,7 +1483,6 @@ function seguir_comoadmin() {
 	return false;
 }
 
-
 function selecciona_vigente(xx,yy) {
 	var src = "/static/img/mapa.jpg";
 	if(document.getElementById(xx).checked  == 0) {
@@ -1549,4 +1547,22 @@ function inicializa_dia(xx,yy) {
 		}
 	}
 }
+
+
+function clic_foto(xx,yy) {
+	Swal.fire({
+	  modal: false, 	
+	  position: 'center',
+	  imageUrl: '/static/img/'+xx+'.jpg',
+	  width: '700px',
+	  Height:'900px',
+  	  imageWidth: 430,
+  	  imageHeight:390,
+  	  html: yy,
+	  showConfirmButton: true,
+	  confirmButtonText: 'Continuar',
+	})
+	/* document.getElementById(yy).checked = 0; */
+	return false;
+}	
 

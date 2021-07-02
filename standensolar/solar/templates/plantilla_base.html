@@ -65,16 +65,18 @@
     <header class="header">{% csrf_token %}
         <div class="container logo-nav-container">  
             <a href="#" class="logo"><img  src="{{ logo_corp_chico }}"></a>
+                   
             <span class="menu-icon"><i class="fa fa-bars"></i></span>           
             <span class="menu-cruz"><i class="fa fa-times"></i></span>    
+
             <div class = "titulo">
                 <div class="grid-item1"><p>Energía Solar</p></div>
             </div>
             <div class = "navigation">    
                 <ul> 
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Galería</a></li>
+                    <li><a href="{% url 'principal' %}">Inicio</a></li>
+                    <li><a href="{% url 'quienessomos' %}">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
                     {%if request.user.is_staff %}
                         <li><a href="#">Admin</a></li>    
                     {%else%}
@@ -105,9 +107,8 @@
         </div>
                 
         <div class="grid_chica">
-            <img src="{{path_static_img}}mapa.jpg" id="img" class="chica" onclick="return clic_img();"/> 
-        </div>
-
+            <img src="{{path_static_img}}mapa.jpg" id="img" class="chica" onclick="return clic_img();"/>
+        </div> 
 
         <div class="footer-texto2">
             {% for ob1 in obs %}
@@ -116,8 +117,7 @@
                 {% endif %}
             {% endfor %}
         </div>
-        
-
+ 
         <div class="footer-texto4">
             <p>Pagina diseñada por Gabriel Araya Garcia - email: gabrielaraya2011@gmail.com - f: +56 9 77211570</p>
             <p>Serán muy valoradas las sugerencias de mejoramiento a esta aplicación, con el propósito de una experiencia mas fluida e intuitiva para los usuarios. Escribir a la dirección de correo aqui señalada<p>

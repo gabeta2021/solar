@@ -1,0 +1,31 @@
+{% extends 'plantilla_base.html' %}
+{% load static %}
+{% block content %}
+
+<form method = "POST"> 
+  {% csrf_token %}
+  <!-- pagina prototipo de WIX: https://standensolar.wixsite.com/website-5 -->
+        <div class = "personas">
+            <div class = "capa-titulo">
+                <div id="horas" class="horas">
+                <p>Quienes somos</p> 
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor_quienes_somos">
+            <div class="grid_quienes_somos">
+                <div class="texto_quienes">
+                    <p><b>Nos dedicamos a proyectar y ejecutar instalaciones solares para que tu hogar sea sustentable. Genera electricidad, Tempera agua para duchas, piscinas, Bombea agua desde pozos, etc. Múltiples usos de la Energía Solar que abunda en nuestro territorio.
+                    </b><p/>
+                </div>
+    
+                <div>
+                    <img class="img-fluid rounded d-block m-l-none" src="{{path_static_img}}quienes_somos.jpg" />
+                </div>
+    
+            </div>
+        </div>        
+    </div>  <!-- personas -->
+</form> 
+{% endblock %}          
