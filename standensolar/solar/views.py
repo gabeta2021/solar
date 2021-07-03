@@ -119,3 +119,18 @@ def quienessomos(request):
         #return render(request,'cambios.html',context)
         return HttpResponse("Accion del post")
     return render(request,'quienessomos.html',context)
+
+def contacto(request):
+    variable1 = 'Quienes Somos'
+    path_static_img = "/static/img/"
+    #path_static_img = "/staticfiles/img/" # para pythonAnywhere
+    logo2 = path_static_img+"logo_ss.jpg"
+    context = {
+        "variable1":variable1,
+        "path_static_img":path_static_img,
+        "logo_corp_chico":logo2,}
+
+    if request.method == "POST":   # va a: CAMBIOS.HTML
+        #return render(request,'cambios.html',context)
+        return HttpResponse("Accion del post")
+    return render(request,'contacto.html',context)

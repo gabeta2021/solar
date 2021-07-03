@@ -69,14 +69,17 @@
             <span class="menu-icon"><i class="fa fa-bars"></i></span>           
             <span class="menu-cruz"><i class="fa fa-times"></i></span>    
 
+            <!--
             <div class = "titulo">
                 <div class="grid-item1"><p>Energía Solar</p></div>
             </div>
+            -->
+
             <div class = "navigation">    
                 <ul> 
                     <li><a href="{% url 'principal' %}">Inicio</a></li>
                     <li><a href="{% url 'quienessomos' %}">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="{% url 'contacto' %}">Contacto</a></li>
                     {%if request.user.is_staff %}
                         <li><a href="#">Admin</a></li>    
                     {%else%}

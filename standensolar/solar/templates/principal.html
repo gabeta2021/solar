@@ -4,6 +4,10 @@
 
 <form method = "POST"> 
   {% csrf_token %}
+  <!-- En consola: ngrok http 8000 -->
+  <!-- Se invoca como: http://458f6b3730a5.ngrok.io/login_ini/ -->
+  <!-- En settings.py: ALLOWED_HOSTS = ['127.0.0.1','localhost','3d92bfc26cc4.ngrok.io'] -->
+
   <!-- pagina prototipo de WIX: https://standensolar.wixsite.com/website-5 -->
   <div class = "personas"> 
       <div class = "capa-titulo">    
@@ -48,12 +52,6 @@
           </div>
       </div>
  
-      <!--
-      <div class="placa_solar" id ="placa_solar">
-          <img src="{{path_static_img}}placa_solar.jpg" />
-      </div>  
-      -->
-
       <div class="placa_solar">
           <figure>
             <img class="img-fluid rounded d-block m-l-none" src="{{path_static_img}}placa_solar.jpg"/>

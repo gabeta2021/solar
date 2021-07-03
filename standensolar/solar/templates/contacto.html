@@ -1,0 +1,33 @@
+{% extends 'plantilla_base.html' %}
+{% load static %}
+{% block content %}
+
+<form method = "POST"> 
+  {% csrf_token %}
+  <!-- pagina prototipo de WIX: https://standensolar.wixsite.com/website-5 -->
+        <div class = "personas">
+            <div class = "capa-titulo">
+                <div id="horas" class="horas">
+                <p>Contacto</p> 
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor_contacto">
+             <div class="grid_contacto">
+                <form>
+                  <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                  </div>
+                  <button class="form-control" id="boton-aceptar">Enviar</button>
+                </form>
+            </div>
+        </div>        
+    </div>  <!-- personas -->
+</form> 
+{% endblock %}          

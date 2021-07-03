@@ -28,13 +28,15 @@ p {
 }
 
 .header {
-  background: #24303c; /**/  
+  /*background: #24303c; */  
+  background: #7B7A77;
   color: white; 
   padding: 2rem 0;
   position: fixed;  /* menu fijo en la parte superior */
   left: 0;
   top: 0;
   right: 0;   /* ocuapamos todo el ancho */
+  opacity: 0.9;
 }
 
 .header a {
@@ -477,8 +479,35 @@ p {
           box-shadow:1px 7px rgba(0,0,0,0.6);
           margin-top: 3px;
       }
+
+    /* 600 */
+    .contenedor_contacto {
+      display:flex;
+      flex-direction:column;
+      margin:auto;
+      width: 95%; /*contenedor plomo claro*/
+      background-color:#EAE9E4; /* plomo claro*/ 
+      border-radius: 10px 10px 10px 10px;
+      align-items: center;      
+    }  
+
+    /* 600 */
+    .grid_contacto {
+      display: block;
+      text-align: left;
+      color: blue;
+      width: 80%; /* ancho de la grid */
+      border-radius: 10px 10px 10px 10px;
+      background-color: white;  
+      margin-bottom: 15px;
+      margin-top: 15px;
+      border: 1px;
+      padding: 16px 40px 16px 40px;
+      padding-bottom: 3rem;
+    }
+
 }
-/* fin responsivo 600 px */
+/* ---------------------fin responsivo 600 px ---------------------*/
 
 
 /* ==PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS====PROMOS==== */
@@ -655,15 +684,44 @@ p {
       border-radius: 10px;
     }
 
+    /* 1026 */
     .grid_quienes_somos {
       margin-left: 3rem; 
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: 3rem 3; /* distancia con el borde superior*/  
-      /*color: white;*/
+      color: white;
       width: 90%;
       text-align: center; /* centra las fotos horizontalmente*/
       align-items: center;
+    }
+
+    /* 1026 */
+    .contenedor_contacto {
+      display:flex;
+      flex-direction:column;
+      margin:auto;
+      width: 85%; /*contenedor plomo claro*/
+      background-color: #EAE9E4; 
+      border-radius: 10px 10px 10px 10px; /*distancia interior con respecto al contenedor */
+      align-items: center;      
+    }  
+
+    /* 1026 */
+    .grid_contacto {
+      /* display: grid; */
+      /*grid-template-columns: 1fr;*/
+      display: block;
+      text-align: left;
+      color: blue;
+      width: 60%; /* ancho de la grid */
+      border-radius: 10px 10px 10px 10px;
+      background-color: white; 
+      margin-bottom: 15px;
+      margin-top: 15px;
+      border: 1px;
+      padding: 16px 40px 16px 40px;
+      padding-bottom: 3rem;
     }
 
     /* mapa agrandado del footer 1026px*/
@@ -678,7 +736,7 @@ p {
     }
 
 }
-/* fin responsive 1025px*/
+/*---------------------- fin responsive 1025px----------------------------------------------*/
 
 
 /* contenedor de la foto de promo seleccionada */
@@ -1758,6 +1816,24 @@ placa_solar, .contain {
     color: black;
 }
 
+
+#boton-aceptar {
+  border-radius:10px;
+  text-decoration:none;
+  height: 40px;
+  background: white;
+  color:blue;
+  text-align: center;
+  esquema: none;
+  /*transition: forecolor-color 0.2s; */
+  font-size: 1.7em;
+  letter-spacing: 0.1em;
+  border: 0.10em solid #C5CCF7;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  -webkit-transition: color 300ms, background 500ms, border-color 700ms;
+  transition: color 300ms, background 500ms, border-color 700ms;
+}
+
 .contenedor_quienes_somos {
   margin:auto;
   /*align-items: center;  */
@@ -1790,6 +1866,15 @@ placa_solar, .contain {
   /*transform: rotate(4deg);          /* rota 4 grados a la derecha */
 }
  
-.titulo p {
-  color: #F9CB20;
-}
+@media only screen (min-width: 610px) and (max-width: 1020px) {
+  .header {
+    /*background: #7B7A77;*/
+    background: yellow;
+    color: white; 
+    padding: 2rem 0;
+    position: static;   /* menu que se desplaza junto con la pagina */
+    left: 0;
+    top: 0;
+    right: 0;   /* ocuapamos todo el ancho */
+    opacity: 0.9;
+  }
