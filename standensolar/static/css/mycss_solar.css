@@ -234,7 +234,7 @@ p {
         width:100%;
       }
 
-      /* marco que contiene la grid (imagenes) */
+      /* (600) marco que contiene la grid (imagenes) */
       .contenedor, .contenedor2 {
         display: grid;
         grid-template-columns: 1fr;
@@ -247,11 +247,11 @@ p {
         padding-bottom: 3rem;
         background-color:#EAE9E4; 
         border-radius: 10px 10px 10px 10px;
-        with:95%;
+        with:98%;
         color:blue;
       }
 
-      /* PRINCIPAL - promos */
+      /* (600) PRINCIPAL - promos */
       .personas, .contenedor{
           grid-template-columns: repeat(1,1fr); 
           /*align-items: center; */      
@@ -263,12 +263,12 @@ p {
       }
 
       /* TRATAMIENTO DE IMAGEN DE PROMO SELECCIONADA PARA PEDIR */
-      /* maximo agrandamiento de la imagen */
+      /* (600) maximo agrandamiento de la imagen */
       .promo-pedida a img:hover { 
           width: 75%;
       }
 
-      /* PRINCIPAL - borde de cada promo*/
+      /* (600) PRINCIPAL - borde de cada promo*/
       .persona__columna {
         /*position: relative;    /* nueva*/
         display: inline-block; /* nueva*/
@@ -276,25 +276,25 @@ p {
         padding: 0rem;
       }
       
-      /*clase padre*/
+      /*(600)clase padre*/
       .clase-cambios {
         margin-top: 17rem;  /* ubicacion de esta ventana desde el borde de la clase padre*/
       }        
       
-      /*sub-clase (hija)*/
+      /*(600) sub-clase (hija)*/
       .form-identi {
         margin-top: 12rem;  /* ubicacion de esta ventana desde elborde de la clase padre*/
         margin-bottom: 5rem;
        /*height:40px;    /* alto de este objeto contenedor*/
       }
-     
+     /*(600)*/
      .cont-subgrid-celda1 {
         display: grid; 
         grid-gap: 1px;
         align-items: top; /* para centrar verticalmente */
         max-width: 100%;  /* determina el ancho del contenedor */
       }
-
+      /*(600)*/
      .cont-subgrid-celda2 {
        grid-gap: 1px;
        align-items: top; /* para centrar verticalmente */
@@ -485,7 +485,7 @@ p {
       display:flex;
       flex-direction:column;
       margin:auto;
-      width: 95%; /*contenedor plomo claro*/
+      width: 98%; /*contenedor plomo claro*/
       background-color:#EAE9E4; /* plomo claro*/ 
       border-radius: 10px 10px 10px 10px;
       align-items: center;      
@@ -496,7 +496,7 @@ p {
       display: block;
       text-align: left;
       color: blue;
-      width: 80%; /* ancho de la grid */
+      width: 100%; /* ancho de la grid */
       border-radius: 10px 10px 10px 10px;
       background-color: white;  
       margin-bottom: 15px;
@@ -722,6 +722,7 @@ p {
       border: 1px;
       padding: 16px 40px 16px 40px;
       padding-bottom: 3rem;
+      font-size: 1.3em;
     }
 
     /* mapa agrandado del footer 1026px*/
@@ -1816,12 +1817,11 @@ placa_solar, .contain {
     color: black;
 }
 
-
 #boton-aceptar {
   border-radius:10px;
   text-decoration:none;
-  height: 40px;
-  background: white;
+  height: 43px;
+  background: #A1BBF3;
   color:blue;
   text-align: center;
   esquema: none;
@@ -1829,7 +1829,7 @@ placa_solar, .contain {
   font-size: 1.7em;
   letter-spacing: 0.1em;
   border: 0.10em solid #C5CCF7;
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  /* font-family: Tahoma, Verdana, Segoe, sans-serif;*/
   -webkit-transition: color 300ms, background 500ms, border-color 700ms;
   transition: color 300ms, background 500ms, border-color 700ms;
 }
@@ -1878,3 +1878,18 @@ placa_solar, .contain {
     right: 0;   /* ocuapamos todo el ancho */
     opacity: 0.9;
   }
+}
+
+ #nombre, #correo, #celular, #temainteres {
+  height: 3.2rem;
+  font-size: 1.4rem;
+}
+
+.form-group label {
+  font-size: 1.3rem;  
+}
+
+.grid_contacto {
+   border-bottom: 40px solid transparent; /*Los 40px modifican lo alto.*/
+   border-left: 16px solid  #A1BBF3; /*Los 16px modifican lo ancho del triangulo y red obviamente sera el color que tendrá.*/
+}

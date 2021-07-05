@@ -125,12 +125,21 @@ def contacto(request):
     path_static_img = "/static/img/"
     #path_static_img = "/staticfiles/img/" # para pythonAnywhere
     logo2 = path_static_img+"logo_ss.jpg"
+    tema_interes = [
+        'Seleciona una opción',
+        'Sistema de Bombeo Solar',
+        'Sistema Solar termico',
+        'Sistema solar Fotovoltaico',
+        'Instalación Off Grid con inversor Victron',
+        'Inversor SMA (On Grid)',]
+
     context = {
         "variable1":variable1,
         "path_static_img":path_static_img,
-        "logo_corp_chico":logo2,}
+        "logo_corp_chico":logo2,
+        "tema_interes":tema_interes,}
 
     if request.method == "POST":   # va a: CAMBIOS.HTML
         #return render(request,'cambios.html',context)
-        return HttpResponse("Accion del post")
+        return HttpResponse("..Y aquí es donde se irá al WS, con toda la información de esta pantalla")
     return render(request,'contacto.html',context)
