@@ -271,7 +271,7 @@ p {
       /* (600) PRINCIPAL - borde de cada promo*/
       .persona__columna {
         /*position: relative;    /* nueva*/
-        display: inline-block; /* nueva*/
+        display: inline-block;   /* nueva*/
         margin-right: 0px;
         padding: 0rem;
       }
@@ -1824,6 +1824,7 @@ placa_solar, .contain {
   background: #A1BBF3;
   color:blue;
   text-align: center;
+  margin-top:3rem;
   esquema: none;
   /*transition: forecolor-color 0.2s; */
   font-size: 1.7em;

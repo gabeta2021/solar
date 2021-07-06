@@ -22,19 +22,20 @@ function prueba() {
     document.getElementById("rut").style.border = '2px solid red';
 }
 
-function validaemail(email) {
+function validaemail() {
 	/*alert("email llegó con :"+email);*/
-	if(email=="correo"){ 
-    	var x = document.getElementById("correo").value
-	} else {
-    	var x = document.getElementById("correo_apod").value
-	}
-
+   	var x = document.getElementById("correo").value
     if(x!='') {
         var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if ( !expr.test(x) ) {
-            alert("Error: La dirección de correo " + x + " es incorrecta.");
-            document.getElementById("correo").value = "";
+            document.getElementById('error-span').innerHTML='Error en el dato ingresado !!'; 
+            document.getElementById("correo").style.border = '2px solid red';
+            document.getElementById("boton-aceptar").disabled = true;
+        } else { 
+        	document.getElementById('error-span').innerHTML='';   
+        	document.getElementById("correo").style.border = '';
+    	    document.getElementById("boton-aceptar").disabled = false;
+
         }
     }
 }
@@ -202,17 +203,22 @@ function upperCase() {
 }
 
 function valida_fono() {
-	var fon = document.getElementById("fono_cuid").value;
+	var fon = document.getElementById("celular").value;
+	var expresion = /^3[\d]{9}$/;
     if(fon!='') {
-		if( (!/^([0-9])*$/.test(fon)) ) {
-			alert("El formato del numero telefonico introducido es incorrecto.");
-			document.getElementById("fono_cuid").style.border = '2px solid red';
-			document.getElementById("fono_cuid").focus();
+		if( !expresion.test(fon) ) {
+			document.getElementById("celular").style.border = '2px solid red'; 
+			document.getElementById('error-span').innerHTML='Error en el dato ingresado !!'; 
+			document.getElementById("boton-aceptar").disabled = true;
 		}else{
-			document.getElementById("fono_cuid").style.border = '';	
+			document.getElementById("celular").style.border = '';	
+			document.getElementById('error-span').innerHTML=''; 
+			document.getElementById("boton-aceptar").disabled = false;
 		}
 	}
+	return true;	
 }
+
 
 
 function confirmar_borrado(nombre) {
@@ -258,7 +264,6 @@ function ValidarForm() {
 	var tipo_turno2 = document.getElementById("tipo_turno2").value 
 	var tipo_turno3 = document.getElementById("tipo_turno3").value
 	var reca_cui = document.getElementById("reca_cui").value
-
 
 	if (yace == '6'){
 		alert("No ha especificado la ESTADIA !!")

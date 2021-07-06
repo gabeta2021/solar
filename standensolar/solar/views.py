@@ -30,8 +30,7 @@ def login_ini(request):
         error_log = "error"
         
     context = {"variable1":variable1,
-    		   "error_log":error_log,
-              }
+    		   "error_log":error_log,}
 
     return render(request,'login_ini.html',context)
 
