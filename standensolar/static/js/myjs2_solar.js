@@ -20,35 +20,8 @@ function prueba() {
     alert("!! Entró al MYJS.JS ¡¡"+x);
     document.getElementById("rut").focus();
     document.getElementById("rut").style.border = '2px solid red';
-}
+	}
 
-function validaemail() {
-	/*alert("email llegó con :"+email);*/
-   	var x = document.getElementById("correo").value
-    if(x!='') {
-        var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if ( !expr.test(x) ) {
-            document.getElementById('error-span').innerHTML='Error en el dato ingresado !!'; 
-            document.getElementById("correo").style.border = '2px solid red';
-            document.getElementById("boton-aceptar").disabled = true;
-        } else { 
-        	document.getElementById('error-span').innerHTML='';   
-        	document.getElementById("correo").style.border = '';
-    	    document.getElementById("boton-aceptar").disabled = false;
-
-        }
-    }
-}
-
-
-function validarut_cui() {
-	var rut = document.getElementById("rut").value;
-	if(document.getElementById("extran").checked) { 	
-		return true;
-	} else {	
-		validarut();
- 	}
-}
 
 
 function separadordemiles(input) {
@@ -56,18 +29,6 @@ function separadordemiles(input) {
 	/* alert(num); */
 }
 
-
-function validarut_999() {
-    /*
-	xx = validarut_()
-	if(xx == true){
-		siexiste(rut)
-		return true;
-	}else{
-		return false;
-	}
-	*/
-}
 
 /* valida rut del paciente desde FICHA_PACIENTES.HTML */
 function validarut() {
@@ -120,14 +81,6 @@ function validarut() {
 		}
 	}	
 }
-
-/*
-$(document).ready(function(){
-   $("#rut").blur(function(evento){
-      alert("Ha entrado al puto JQuery");
-   });
-});
-*/
 
 /* valida rut del apoderado desde ficha PACIENTE */
 function validarut2() {
@@ -202,24 +155,6 @@ function upperCase() {
 	document.getElementById("rut").value=x.toUpperCase()
 }
 
-function valida_fono() {
-	var fon = document.getElementById("celular").value;
-	var expresion = /^3[\d]{9}$/;
-    if(fon!='') {
-		if( !expresion.test(fon) ) {
-			document.getElementById("celular").style.border = '2px solid red'; 
-			document.getElementById('error-span').innerHTML='Error en el dato ingresado !!'; 
-			document.getElementById("boton-aceptar").disabled = true;
-		}else{
-			document.getElementById("celular").style.border = '';	
-			document.getElementById('error-span').innerHTML=''; 
-			document.getElementById("boton-aceptar").disabled = false;
-		}
-	}
-	return true;	
-}
-
-
 
 function confirmar_borrado(nombre) {
 	var nombre = $('#nombre').val();
@@ -248,66 +183,9 @@ function mayuscula(e) {
 	e.value = e.value.toUpperCase();
 }
 
-
 function limpia() {
 	document.getElementById("busca").value = " ";
 }
-
-
-/* Valida FICHA de PAUTA*/ 
-function ValidarForm() {
-	var yace = document.getElementById("yace").value 
-	var rut_t1 = document.getElementById("rut_t1").value 
-	var rut_t2 = document.getElementById("rut_t2").value 
-	var rut_t3 = document.getElementById("rut_t3").value 
-	var tipo_turno1 = document.getElementById("tipo_turno1").value 
-	var tipo_turno2 = document.getElementById("tipo_turno2").value 
-	var tipo_turno3 = document.getElementById("tipo_turno3").value
-	var reca_cui = document.getElementById("reca_cui").value
-
-	if (yace == '6'){
-		alert("No ha especificado la ESTADIA !!")
-		document.getElementById('yace').focus()
-		document.getElementById('yace').style.border = '2px solid red';		
-		return false;	
-	}
-
-	if(rut_t1 == '0-0' && rut_t2 == '0-0' && rut_t3 == '0-0' ){
-		alert("Error!!..no ha asignado CUIDADOR");
-		return false;
-	}
-
-	if(rut_t1 != '0-0' && tipo_turno1 == '0'){
-		alert("Error!!..todo cuidador debe tener su respectivo TIPO DE TURNO");
-		document.getElementById('tipo_turno1').focus()
-		document.getElementById('tipo_turno1').style.border = '2px solid red';		
-		return false;
-	}
-
-	if(rut_t2 != '0-0' && tipo_turno2 == '0'){
-		alert("Error!!..todo cuidador debe tener su respectivo TIPO DE TURNO");
-		document.getElementById('tipo_turno2').focus()
-		document.getElementById('tipo_turno2').style.border = '2px solid red';		
-		return false;
-	}
-
-	if(rut_t3 != '0-0' && tipo_turno3 == '0'){
-		alert("Error!!..todo cuidador debe tener su respectivo TIPO DE TURNO");
-		document.getElementById('tipo_turno3').focus()
-		document.getElementById('tipo_turno3').style.border = '2px solid red';		
-		return false;
-	}
-
-
-	/* recargo x dia FIN DE SEMANA - DIA FESTIVO - NORMAL */
-	if(reca_cui === "0"){
-		alert("Defina si esta fecha es: NORMAL - DOMINGO - FESTIVO ");
-		document.getElementById('reca_cui').focus()
-		document.getElementById('reca_cui').style.border = '2px solid red';
-		return false;
-	}
-}
-
 
 function confirmaelimpac(nombre,id){
 	var opcion=confirm('¿Seguro de borrar a paciente: '+nombre+' ?');
@@ -463,12 +341,9 @@ function miniventana() {
 	window.open("http://www.desarrolloweb.com" , "ventana1" , "width=120,height=300,scrollbars=NO") 
 }
 
-
-
 function oculta() {
  	document.getElementById('div1').style.display = 'none';
 }
-
 
 function confirmar_borrado4(nombre,id) {
 	var nombre = document.getElementById("nombre").value; 
@@ -485,23 +360,6 @@ function confirmar_borrado4(nombre,id) {
    		});
  	}
 }
-
-/* para probar */
-/*
-var rut = "145694841";
-// retorna true si es válido
-if($.validateRut(rut)) {
-	alert("El rut es válido!");
-}
-*/
-
-/*
-$(document).ready(function(){
- 	$('#rut').blur(function(evento){
-	alert("..entró,..y ahora que? !!");
-  	});
-});
-*/
 
 
 /*
@@ -1570,4 +1428,49 @@ function clic_foto(xx,yy) {
 	/* document.getElementById(yy).checked = 0; */
 	return false;
 }	
+
+
+function validaemail() {
+   	var x = document.getElementById("correo").value
+    if(x!='') {
+        var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( !expr.test(x) ) {
+            document.getElementById('error-span').innerHTML='Error en el dato ingresado !!'; 
+            document.getElementById("correo").style.border = '2px solid red';
+            document.getElementById("boton-aceptar").disabled = true;
+        } else { 
+        	document.getElementById('error-span').innerHTML='';   
+        	document.getElementById("correo").style.border = '';
+    	    document.getElementById("boton-aceptar").disabled = false;
+        }
+    }
+}
+
+function valida_fono() {
+	var fon = document.getElementById("celular").value;
+	var digitos = fon.length;
+	if(digitos != 9){
+		document.getElementById("celular").style.border = '2px solid red'; 
+		document.getElementById('error-span').innerHTML='Error en el dato ingresado !!'; 
+		document.getElementById("boton-aceptar").disabled = true;
+	}else{
+		document.getElementById("celular").style.border = '';	
+		document.getElementById('error-span').innerHTML=''; 
+		document.getElementById("boton-aceptar").disabled = false;
+	}
+}
+
+function validainteres(){
+	var interes = document.getElementById("temainteres").value;
+	/* alert(interes); */
+	if ( interes == 0) {
+        document.getElementById('error-span').innerHTML='Error en el dato ingresado !!'; 
+		document.getElementById("temainteres").style.border = '2px solid red';
+		document.getElementById("boton-aceptar").disabled = true;
+    } else { 
+        document.getElementById('error-span').innerHTML='';   
+        document.getElementById("temainteres").style.border = '';
+    	document.getElementById("boton-aceptar").disabled = false;
+	}
+}
 

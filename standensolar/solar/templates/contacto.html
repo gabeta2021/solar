@@ -15,7 +15,7 @@
 
         <div class="contenedor_contacto">
              <div class="grid_contacto">
-                <form>
+                <form name="from" method="POST" action="#">
 
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
@@ -34,17 +34,16 @@
 
                   <div class="form-group">
                     <label for="temainteres">¿En que estás interesado?:</label>
-                    <select name="temainteres" class="form-control" id="temainteres">
+                    <select name="temainteres" class="form-control" id="temainteres" onchange = "return validainteres();">
                         {% for c in tema_interes %}
                             <option value ={{forloop.counter0}}>{{c}}</option>
                         {% endfor %}      
                     </select>
                   </div>
 
-                   <span style="color:red;" id="error-span"><b></b></span>
+                  <span style="color:red;" id="error-span"><b></b></span>
 
-
-                  <button class="form-control" id="boton-aceptar">Enviar</button>
+                  <button class="form-control" id="boton-aceptar" onclick = "return validainteres();">Enviar mis datos</button>
                 </form>
             </div>
         </div>        
